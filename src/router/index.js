@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
-import navBar from '../views/navBarView.vue'
+// import navBar from '../views/navBarView.vue'
 
 
 Vue.use(VueRouter)
@@ -10,7 +10,7 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    component: Home, navBar
+    component: Home
   },
   {
     path: '/about',
@@ -23,6 +23,8 @@ const routes = [
 ]
 
 const router = new VueRouter({
+  mode: 'history',
+  base: process.env.BASE_URL,
   routes
 })
 

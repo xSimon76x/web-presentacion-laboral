@@ -1,9 +1,34 @@
 <template>
-  <p>dentro del componente navbar</p>
+  <v-card color="grey lighten-4" flat tile>
+    <v-toolbar
+      prominent
+      extended
+      height="600"
+      src="https://i.gifer.com/Gchv.gif"
+    >
+      <v-app-bar-nav-icon></v-app-bar-nav-icon>
+
+      <v-toolbar-title>Simon Bustamante Venegas </v-toolbar-title>
+
+      <v-spacer></v-spacer>
+
+      <v-btn icon>
+        <v-icon>mdi-magnify</v-icon>
+      </v-btn>
+
+      <v-btn icon>
+        <v-icon>mdi-heart</v-icon>
+      </v-btn>
+
+      <v-btn icon>
+        <v-icon>mdi-dots-vertical</v-icon>
+      </v-btn>
+    </v-toolbar>
+  </v-card>
 </template>
 
 <script>
-export default {};
+export default {
+  name: "NavBar",
+};
 </script>
-
-<style></style>
