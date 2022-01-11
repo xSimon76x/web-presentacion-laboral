@@ -1,20 +1,20 @@
 <template>
   <div>
+    <nDrawers />
     <!-- <hello-world /> -->
-    <nBar />
   </div>
 </template>
 
 <script>
 import HelloWorld from "../components/HelloWorld";
-import nBar from "../components/navBar.vue";
-
+// Dentro de nDrawes esta el menu y la exportacion del componente navBar
+import nDrawers from "../components/navDrawers.vue";
 export default {
   name: "Home",
 
   components: {
     HelloWorld,
-    nBar,
+    nDrawers,
   },
 };
 </script>
