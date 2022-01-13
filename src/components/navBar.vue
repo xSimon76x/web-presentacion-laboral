@@ -1,15 +1,20 @@
 <template>
   <div>
-    <v-card color="transparent" flat tile>
-      <v-toolbar color="transparent"
-        ><!-- app -->
+    <v-card flat tile lights-out dark>
+      <v-app-bar absolute elevation="16">
+        <template v-slot:img="{ props }">
+          <v-img
+            v-bind="props"
+            gradient="to top right, rgba(55,236,186,.7), rgba(25,32,72,.7)"
+          ></v-img>
+        </template>
 
         <v-app-bar-nav-icon
           @click.stop="drawerPadre = !drawerPadre"
         ></v-app-bar-nav-icon>
         <!-- click.stop -->
 
-        <v-toolbar-title class="font-weight-black">
+        <v-toolbar-title class="font-weight-black" hidden>
           Web Portafolio
         </v-toolbar-title>
 
@@ -26,9 +31,15 @@
         <v-btn icon>
           <v-icon>mdi-phone</v-icon>
         </v-btn>
-      </v-toolbar>
+      </v-app-bar>
+      <v-container>
+        <iPres fluid />
+      </v-container>
+
+      <!-- container -->
     </v-card>
-    <iPres />
+
+    <v-system-bar height="26" lights-out></v-system-bar>
     <!-- menu desplegable -->
     <v-navigation-drawer app v-model="drawerPadre" temporary>
       <div>
@@ -105,3 +116,11 @@ export default {
   // },
 };
 </script>
+
+<style scoped lang="scss">
+.back {
+  background-image: url("../assets/img/fondo.png");
+  background-size: cover;
+  height: 100vh;
+}
+</style>

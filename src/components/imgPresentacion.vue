@@ -1,12 +1,9 @@
 <template>
   <div>
-    <v-img
-      contain
-      lazy-src="https://picsum.photos/id/11/10/6"
-      max-height="300"
-      max-width="500"
-      src="https://picsum.photos/id/11/500/300"
-    ></v-img>
+    <div class="back"></div>
+
+    <v-img style="width: 200vw"></v-img>
+    <h2>Simon Bustamante</h2>
   </div>
 </template>
 
@@ -14,4 +11,17 @@
 export default {};
 </script>
 
-<style></style>
+<style scoped lang="scss">
+.back {
+  background: url("../assets/img/fondo.png") no-repeat center;
+  background-size: cover;
+  height: 50vh;
+  transform: scale(1.1);
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.p {
+  transform: scale(1.1);
+}
+</style>
