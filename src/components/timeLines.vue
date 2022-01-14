@@ -1,127 +1,195 @@
 <template>
   <div>
     <v-container style="max-width: 600px">
-      <v-timeline dense clipped>
-        <v-timeline-item fill-dot class="white--text mb-4" color="orange" large>
-          <template v-slot:icon>
-            <span>LT</span>
-          </template>
-          <v-row>
-            <v-col style="color: black" cols="8" class="mt-4">
-              <span>Linea de tiempo</span>
-            </v-col>
-          </v-row>
-        </v-timeline-item>
-
-        <v-slide-x-transition group>
-          <v-timeline-item
-            v-for="event in timeline"
-            :key="event.id"
-            class="mb-4"
-            color="pink"
-            small
+      <v-row justify="space-around">
+        <v-col cols="12" md="6">
+          <v-sheet
+            color="white"
+            elevation="4"
+            height="auto"
+            width="auto"
+            rounded
+            class="mx-auto"
           >
-            <v-row justify="space-between">
-              <v-col cols="7" v-text="event.text"></v-col>
-              <v-col class="text-right" cols="5" v-text="event.time"></v-col>
-            </v-row>
-          </v-timeline-item>
-        </v-slide-x-transition>
+            <v-timeline>
+              <v-timeline-item class="mb-4" small color="orange">
+                <v-row>
+                  <v-col cols="2">
+                    <v-card
+                      class="d-flex align-center mb-2"
+                      flat
+                      height="100"
+                      tile
+                    >
+                      <img
+                        class="pa-2"
+                        src="../assets/img/Logo_DuocUC.png"
+                        width="70"
+                      />
+                    </v-card>
+                  </v-col>
+                  <v-col cols="6">
+                    <h6>Inicio en Ingeniería en Informática</h6>
+                    <p
+                      class="text--disabled text-body-2 ma-0 pa-0"
+                      font-size="12"
+                    >
+                      Duoc UC, Sede San Bernardo
+                    </p>
+                  </v-col>
+                  <v-col class="text-right" cols="3"> 2018 </v-col>
+                </v-row>
+              </v-timeline-item>
+              <v-timeline-item class="text-right mb-4" small color="orange">
+                <v-row justify="space-between">
+                  <v-col cols="6">
+                    <span>Practica Laboral </span>
 
-        <v-timeline-item
-          class="mb-4"
-          color="orange"
-          icon-color="grey lighten-2"
-          small
-        >
-          <v-row>
-            <v-col cols="2">
-              <v-card class="d-flex align-center mb-6" flat height="100" tile>
-                <img
-                  class="pa-2"
-                  src="../assets/img/Logo_DuocUC.png"
-                  width="70"
-                />
-              </v-card>
-            </v-col>
-            <v-col cols="6">
-              <span>Inicio en Ingeniería en Informática</span>
-              <p class="text--disabled text-body-2 ma-0 pa-0">
-                Duoc UC, Sede San Bernardo
-              </p>
-            </v-col>
-            <v-col class="text-right" cols="3"> 2018 </v-col>
-          </v-row>
-        </v-timeline-item>
+                    <p class="text--disabled text-body-2 ma-0 pa-0">
+                      Pontificia Universidad Católica de Chile, Campus San
+                      Joaquín
+                    </p>
+                  </v-col>
+                  <v-col class="text-right" cols="4">
+                    Ene 2020 - Feb 2020
+                  </v-col>
+                  <v-col cols="2">
+                    <v-card
+                      class="d-flex align-center mb-6"
+                      flat
+                      height="100"
+                      tile
+                    >
+                      <img
+                        class="pa-2"
+                        src="../assets/img/Pontificia_universidad_catolica_de_chile - puc.png"
+                        width="70"
+                      />
+                    </v-card>
+                  </v-col>
+                </v-row>
+              </v-timeline-item>
+              <v-timeline-item class="mb-4" small color="orange"
+                ><v-row justify="space-between">
+                  <v-col cols="2">
+                    <v-card
+                      class="d-flex align-center mb-6"
+                      flat
+                      height="100"
+                      tile
+                    >
+                      <img
+                        class="pa-2"
+                        src="../assets/img/citt - duoc uc.jpg"
+                        width="70"
+                      />
+                    </v-card>
+                  </v-col>
+                  <v-col cols="6">
+                    <span
+                      >Proyecto Citt / Xentric SA. (Practica Profesional)</span
+                    >
+                    <p class="text--disabled text-body-2 ma-0 pa-0">
+                      Citt - Duoc UC, Sede San Bernardo
+                    </p>
+                  </v-col>
+                  <v-col class="text-right" cols="3">
+                    Jun 2021 - Nov 2021
+                  </v-col>
+                </v-row></v-timeline-item
+              >
 
-        <v-timeline-item class="mb-4" small color="orange">
-          <v-row justify="space-between">
-            <v-col cols="2">
-              <v-card class="d-flex align-center mb-6" flat height="100" tile>
-                <img
-                  class="pa-2"
-                  src="../assets/img/Pontificia_universidad_catolica_de_chile - puc.png"
-                  width="70"
-                />
-              </v-card>
-            </v-col>
-            <v-col cols="6">
-              <span>Practica Laboral </span>
+              <v-timeline-item class="mb-4" small color="orange">
+                <v-row>
+                  <v-col cols="2">
+                    <v-card
+                      class="d-flex align-center mb-6"
+                      flat
+                      height="100"
+                      tile
+                    >
+                      <img
+                        class="pa-2"
+                        src="../assets/img/Logo_DuocUC.png"
+                        width="70"
+                      />
+                    </v-card>
+                  </v-col>
+                  <v-col cols="6">
+                    <span>Egreso en Ingeniería en Informática</span>
+                    <p class="text--disabled text-body-2 ma-0 pa-0">
+                      Duoc UC, Sede San Bernardo
+                    </p>
+                  </v-col>
+                  <v-col class="text-right" cols="3"> 2021 </v-col>
+                </v-row>
+              </v-timeline-item>
+            </v-timeline>
 
-              <p class="text--disabled text-body-2 ma-0 pa-0">
-                Pontificia Universidad Católica de Chile, Campus San Joaquín
-              </p>
-            </v-col>
-            <v-col class="text-right" cols="4"> Ene 2020 - Feb 2020 </v-col>
-          </v-row>
-        </v-timeline-item>
+            <!-- <v-timeline dense clipped>
+              <v-timeline-item
+                fill-dot
+                class="white--text"
+                color="orange"
+                large
+              >
+                <template v-slot:icon>
+                  <span>LT</span>
+                </template>
+                <v-row>
+                  <v-col style="color: black" cols="8" class="mt-4">
+                    <span>Linea de tiempo</span>
+                  </v-col>
+                </v-row>
+              </v-timeline-item>
 
-        <v-timeline-item class="mb-4" color="orange" small>
-          <v-row justify="space-between">
-            <v-col cols="2">
-              <v-card class="d-flex align-center mb-6" flat height="100" tile>
-                <img
-                  class="pa-2"
-                  src="../assets/img/citt - duoc uc.jpg"
-                  width="70"
-                />
-              </v-card>
-            </v-col>
-            <v-col cols="6">
-              <span>Proyecto Citt / Xentric SA. (Practica Profesional)</span>
-              <p class="text--disabled text-body-2 ma-0 pa-0">
-                Citt - Duoc UC, Sede San Bernardo
-              </p>
-            </v-col>
-            <v-col class="text-right" cols="3"> Jun 2021 - Nov 2021 </v-col>
-          </v-row>
-        </v-timeline-item>
-        <v-timeline-item
-          class="mb-4"
-          color="orange"
-          icon-color="grey lighten-2"
-          small
-        >
-          <v-row>
-            <v-col cols="2">
-              <v-card class="d-flex align-center mb-6" flat height="100" tile>
-                <img
-                  class="pa-2"
-                  src="../assets/img/Logo_DuocUC.png"
-                  width="70"
-                />
-              </v-card>
-            </v-col>
-            <v-col cols="6">
-              <span>Egreso en Ingeniería en Informática</span>
-              <p class="text--disabled text-body-2 ma-0 pa-0">
-                Duoc UC, Sede San Bernardo
-              </p>
-            </v-col>
-            <v-col class="text-right" cols="3"> 2021 </v-col>
-          </v-row>
-        </v-timeline-item>
-      </v-timeline>
+              <v-slide-x-transition group>
+                <v-timeline-item
+                  v-for="event in timeline"
+                  :key="event.id"
+                  class="mb-4"
+                  color="pink"
+                  small
+                >
+                  <v-row justify="space-between">
+                    <v-col cols="7" v-text="event.text"></v-col>
+                    <v-col
+                      class="text-right"
+                      cols="5"
+                      v-text="event.time"
+                    ></v-col>
+                  </v-row>
+                </v-timeline-item>
+              </v-slide-x-transition>
+
+              <v-timeline-item
+                class="mb-4"
+                color="orange"
+                icon-color="grey lighten-2"
+                small
+              >
+                
+              </v-timeline-item>
+
+              <v-timeline-item >
+                
+              </v-timeline-item>
+
+              <v-timeline-item class="mb-4" color="orange" small>
+                
+              </v-timeline-item>
+              <v-timeline-item
+                class="mb-4"
+                color="orange"
+                icon-color="grey lighten-2"
+                small
+              >
+                
+              </v-timeline-item>
+            </v-timeline> -->
+          </v-sheet>
+        </v-col>
+      </v-row>
     </v-container>
   </div>
 </template>
