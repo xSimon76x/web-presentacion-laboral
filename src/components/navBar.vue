@@ -72,12 +72,12 @@
               </v-list-item-content>
             </v-list-item>
           </v-list>
-          <v-divider></v-divider>
-          <v-footer padless>
-            <v-col class="text-center" cols="12">
+          <!-- <v-divider></v-divider>
+          <v-footer :padless="true" v-bind="localAttrs">
+            <v-col flat tile class="text-center" cols="12">
               {{ new Date().getFullYear() }} — <strong>S.B.V</strong>
             </v-col>
-          </v-footer>
+          </v-footer> -->
         </div>
       </div>
     </v-navigation-drawer>
@@ -105,6 +105,7 @@ export default {
       alignments: ["start", "center", "end"],
       drawerPadre: false,
       items: [
+        { title: "Inicio", icon: "mdi-home" },
         { title: "Proyectos", icon: "mdi-wallet-travel" },
         { title: "Contactos", icon: "mdi-phone" },
       ],
