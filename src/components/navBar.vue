@@ -1,12 +1,9 @@
 <template>
   <div>
-    <v-card flat tile lights-out dark style="padding-bottom: 8vh">
+    <v-card flat tile dark lights-out style="padding-bottom: 8vh">
       <v-app-bar absolute elevation="1">
         <template v-slot:img="{ props }">
-          <v-img
-            v-bind="props"
-            gradient="to top right, rgba(55,236,186,.7), rgba(25,32,72,.7)"
-          ></v-img>
+          <v-img class="back" v-bind="props"></v-img>
         </template>
 
         <v-app-bar-nav-icon
@@ -24,9 +21,27 @@
           <v-icon>mdi-magnify</v-icon>
         </v-btn>
 
-        <v-btn icon>
-          <v-icon color="grey">mdi-wallet-travel</v-icon>
-        </v-btn>
+        <v-dialog transition="dialog-bottom-transition" max-width="600">
+          <template v-slot:activator="{ on, attrs }">
+            <v-btn icon v-bind="attrs" v-on="on">
+              <v-icon color="grey">mdi-wallet-travel</v-icon>
+            </v-btn>
+          </template>
+          <template v-slot:default="dialog">
+            <v-card>
+              <v-toolbar color="primary" dark>Proyectos</v-toolbar>
+              <v-card-text>
+                <div class="text-h5 pa-12">
+                  En proceso...pienso realizar una vista dedicada a los
+                  proyectos, relacionada con visualizar el repositorio de github
+                </div>
+              </v-card-text>
+              <v-card-actions class="justify-end">
+                <v-btn text @click="dialog.value = false">Cerrar</v-btn>
+              </v-card-actions>
+            </v-card>
+          </template>
+        </v-dialog>
 
         <v-btn icon>
           <v-icon>mdi-phone</v-icon>
@@ -35,6 +50,7 @@
 
       <!-- container -->
     </v-card>
+
     <!-- <v-container> </v-container> -->
 
     <!-- espacio entre la img de presentacion y lo demas -->
@@ -63,6 +79,35 @@
 
           <v-list dense>
             <v-list-item v-for="item in items" :key="item.title" link>
+              <v-dialog
+                v-if="item.title == 'Proyectos'"
+                transition="dialog-bottom-transition"
+                max-width="600"
+              >
+                <template v-slot:activator="{ on, attrs }">
+                  <v-list-item-icon>
+                    <v-icon v-bind="attrs" v-on="on">{{ item.icon }}</v-icon>
+                  </v-list-item-icon>
+                  <v-list-item-content v-bind="attrs" v-on="on">
+                    <v-list-item-title>{{ item.title }}</v-list-item-title>
+                  </v-list-item-content>
+                </template>
+                <template v-slot:default="dialog">
+                  <v-card>
+                    <v-toolbar color="primary" dark>Proyectos</v-toolbar>
+                    <v-card-text>
+                      <div class="text-h5 pa-12">
+                        En proceso...pienso realizar una vista dedicada a los
+                        proyectos, relacionada con visualizar el repositorio de
+                        github
+                      </div>
+                    </v-card-text>
+                    <v-card-actions class="justify-end">
+                      <v-btn text @click="dialog.value = false">Cerrar</v-btn>
+                    </v-card-actions>
+                  </v-card>
+                </template>
+              </v-dialog>
               <v-list-item-icon>
                 <v-icon>{{ item.icon }}</v-icon>
               </v-list-item-icon>
@@ -87,12 +132,11 @@
 
 <script>
 import { ref } from "vue";
-import navBar from "../components/navDrawers.vue";
+
 import iPres from "../components/imgPresentacion.vue";
 export default {
   name: "NavBar",
   components: {
-    navBar,
     iPres,
   },
   props: {
@@ -121,8 +165,7 @@ export default {
 
 <style scoped lang="scss">
 .back {
-  background-image: url("../assets/img/fondo.png");
-  background-size: cover;
-  height: 100vh;
+  background: #1f1e1e;
+  // 1f1e1e
 }
 </style>

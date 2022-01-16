@@ -6,7 +6,6 @@
     >
       <timLine />
     </v-parallax>
-    <p hidden>otro fondo :0</p>
   </div>
 </template>
 

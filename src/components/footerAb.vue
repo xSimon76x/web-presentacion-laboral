@@ -13,7 +13,9 @@
         <v-divider></v-divider>
 
         <v-card-text class="black--text">
-          {{ new Date().getFullYear() }} — <strong>Vuetify</strong>
+          Desarrollado y diseñado por
+          <strong>Simon Ivan Bustamante Venegas</strong>. ©2022. Todos los
+          derechos reservados.
         </v-card-text>
       </v-card>
     </v-footer>
