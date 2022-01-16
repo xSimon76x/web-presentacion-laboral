@@ -1,7 +1,7 @@
 <template>
   <div>
-    <v-card flat tile lights-out dark>
-      <v-app-bar absolute elevation="16">
+    <v-card flat tile lights-out dark style="padding-bottom: 8vh">
+      <v-app-bar absolute elevation="1">
         <template v-slot:img="{ props }">
           <v-img
             v-bind="props"
@@ -32,14 +32,14 @@
           <v-icon>mdi-phone</v-icon>
         </v-btn>
       </v-app-bar>
-      <v-container>
-        <iPres fluid />
-      </v-container>
 
       <!-- container -->
     </v-card>
+    <!-- <v-container> </v-container> -->
 
-    <v-system-bar height="26" lights-out></v-system-bar>
+    <!-- espacio entre la img de presentacion y lo demas -->
+    <!-- <v-system-bar hidden height="26" lights-out></v-system-bar> -->
+
     <!-- menu desplegable -->
     <v-navigation-drawer app v-model="drawerPadre" temporary>
       <div>
@@ -81,6 +81,7 @@
         </div>
       </div>
     </v-navigation-drawer>
+    <iPres />
   </div>
 </template>
 
