@@ -1,7 +1,8 @@
 <template>
   <div>
-    <v-card flat tile dark lights-out style="padding-bottom: 8vh">
-      <v-app-bar absolute elevation="1">
+    <v-card flat tile dark lights-out style="padding-bottom: 8vh" fixed>
+      <v-app-bar fixed elevation="1">
+        <!--absolute para que no este fijo mientras se hace scroll en la vista-->
         <template v-slot:img="{ props }">
           <v-img class="back" v-bind="props"></v-img>
         </template>
@@ -42,10 +43,14 @@
             </v-card>
           </template>
         </v-dialog>
-
-        <v-btn icon>
-          <v-icon>mdi-phone</v-icon>
-        </v-btn>
+        <router-link
+          to="/contacto"
+          style="text-decoration: none; color: inherit"
+        >
+          <v-btn icon>
+            <v-icon color="white">mdi-phone</v-icon>
+          </v-btn>
+        </router-link>
       </v-app-bar>
 
       <!-- container -->
@@ -78,20 +83,18 @@
           <v-divider></v-divider>
 
           <v-list dense>
-            <v-list-item v-for="item in items" :key="item.title" link>
-              <v-dialog
+            <v-list-item
+              v-for="item in items"
+              :key="item.title"
+              link
+              :to="{ path: item.route }"
+              style="text-decoration: none; color: inherit"
+            >
+              <!-- <v-dialog
                 v-if="item.title == 'Proyectos'"
                 transition="dialog-bottom-transition"
                 max-width="600"
               >
-                <template v-slot:activator="{ on, attrs }">
-                  <v-list-item-icon>
-                    <v-icon v-bind="attrs" v-on="on">{{ item.icon }}</v-icon>
-                  </v-list-item-icon>
-                  <v-list-item-content v-bind="attrs" v-on="on">
-                    <v-list-item-title>{{ item.title }}</v-list-item-title>
-                  </v-list-item-content>
-                </template>
                 <template v-slot:default="dialog">
                   <v-card>
                     <v-toolbar color="primary" dark>Proyectos</v-toolbar>
@@ -107,13 +110,24 @@
                     </v-card-actions>
                   </v-card>
                 </template>
-              </v-dialog>
+              </v-dialog> -->
               <v-list-item-icon>
-                <v-icon>{{ item.icon }}</v-icon>
+                <v-icon>
+                  {{ item.icon }}
+                </v-icon>
               </v-list-item-icon>
 
               <v-list-item-content>
-                <v-list-item-title>{{ item.title }}</v-list-item-title>
+                <!-- <router-link
+                  to="/"
+                  style="text-decoration: none; color: inherit"
+                  v-if="item.title === 'Proyectos'"
+                > -->
+                <v-list-item-title>
+                  {{ item.title }}
+                </v-list-item-title>
+                <!-- </router-link>
+                <v-list-item-title v-else>{{ item.title }}</v-list-item-title> -->
               </v-list-item-content>
             </v-list-item>
           </v-list>
@@ -125,8 +139,12 @@
           </v-footer> -->
         </div>
       </div>
+      <template v-slot:append>
+        <div>
+          <foAb />
+        </div>
+      </template>
     </v-navigation-drawer>
-    <iPres />
   </div>
 </template>
 
@@ -134,10 +152,12 @@
 import { ref } from "vue";
 
 import iPres from "../components/imgPresentacion.vue";
+import foAb from "../components/footerAb.vue";
 export default {
   name: "NavBar",
   components: {
     iPres,
+    foAb,
   },
   props: {
     test: {
@@ -150,9 +170,9 @@ export default {
       alignments: ["start", "center", "end"],
       drawerPadre: false,
       items: [
-        { title: "Inicio", icon: "mdi-home" },
-        { title: "Proyectos", icon: "mdi-wallet-travel" },
-        { title: "Contactos", icon: "mdi-phone" },
+        { title: "Inicio", icon: "mdi-home", route: "/" },
+        // { title: "Proyectos", icon: "mdi-wallet-travel", route: "/" },
+        { title: "Contactos", icon: "mdi-phone", route: "/contacto" },
       ],
     };
   },

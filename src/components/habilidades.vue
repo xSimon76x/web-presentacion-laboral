@@ -7,9 +7,9 @@
         <v-row justify="space-around">
           <v-col
             v-for="herramienta in herramientas"
-            :key="herramienta"
+            :key="herramienta.alt"
             cols="auto"
-            md="4"
+            md="auto"
           >
             <v-sheet
               :elevation="6"
@@ -57,6 +57,6 @@ export default {
 }
 .divContainer {
   padding-top: 6vh;
-  padding-bottom: 6vh;
+  padding-bottom: 10vh;
 }
 </style>
