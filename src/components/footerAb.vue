@@ -24,18 +24,25 @@
     <v-footer v-bind="localAttrs" dark :padless="true">
       <v-card flat tile width="100%" class="text-center">
         <v-card-text class="blue lighten-1 text-center teal">
+          <!-- <v-tooltip top>
+            <template v-slot:activator="{ on, attrs }"> -->
           <v-btn
+            @click="red(link.url)"
             v-for="link in links"
             :key="link"
-            :to="{ path: link.url }"
             class="mx-2"
             dark
             icon
           >
+            <!-- v-bind="attrs"
+                v-on="on" -->
             <v-icon size="20px">
               {{ link.icons }}
             </v-icon>
           </v-btn>
+          <!-- </template>
+            <span>asdasdasd</span> 
+          </v-tooltip>-->
         </v-card-text>
         <v-divider></v-divider>
         <v-card-text class="py-2 white--text text-center">
@@ -58,19 +65,27 @@ export default {
     links: [
       {
         icons: "mdi-linkedin",
-        url: "https://www.google.com/gmail/about/",
+        url: "https://www.linkedin.com/in/simon-bustamante-venegas",
+        name: "linkedin",
+        lugar: "top",
       },
       {
         icons: "mdi-email",
         url: "https://www.google.com/gmail/about/",
+        name: "linkedin",
+        lugar: "top",
       },
       {
         icons: "mdi-git",
-        url: "https://www.google.com/gmail/about/",
+        url: "https://github.com/xSimon76x",
+        name: "linkedin",
+        lugar: "top",
       },
       {
         icons: "mdi-phone",
-        url: "https://www.google.com/gmail/about/",
+        url: "https://wa.me/+56964621648",
+        name: "linkedin",
+        lugar: "top",
       },
     ],
   }),
@@ -85,6 +100,11 @@ export default {
         attrs[this.variant] = true;
       }
       return attrs;
+    },
+  },
+  methods: {
+    red(link) {
+      window.location.href = link;
     },
   },
 };
