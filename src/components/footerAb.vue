@@ -23,7 +23,7 @@
     </v-footer> -->
     <v-footer v-bind="localAttrs" dark :padless="true">
       <v-card flat tile width="100%" class="text-center">
-        <v-card-text class="blue lighten-1 text-center teal">
+        <v-card-text class="blue lighten-1 text-center py-2">
           <!-- <v-tooltip top>
             <template v-slot:activator="{ on, attrs }"> -->
           <v-btn
@@ -45,10 +45,9 @@
           </v-tooltip>-->
         </v-card-text>
         <v-divider></v-divider>
-        <v-card-text class="py-2 white--text text-center">
-          ©2022 -
-          <strong> Simon Ivan Bustamante Venegas</strong>. Todos los derechos
-          reservados.
+        <v-card-text class="py-2 white--text text-center textFooter">
+          Todos los derechos reservados por
+          <strong> Simon Ivan Bustamante Venegas</strong> ©2022
         </v-card-text>
       </v-card>
     </v-footer>
@@ -110,4 +109,8 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.textFooter {
+  font-size: 10px;
+}
+</style>
