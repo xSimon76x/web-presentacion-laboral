@@ -1,7 +1,7 @@
 <template>
   <div>
-    <v-card flat tile dark lights-out style="padding-bottom: 8vh" fixed>
-      <v-app-bar fixed elevation="1">
+    <v-card flat tile dark lights-out fixed>
+      <v-app-bar elevation="1">
         <!--absolute para que no este fijo mientras se hace scroll en la vista-->
         <template v-slot:img="{ props }">
           <v-img class="back" v-bind="props"></v-img>
@@ -18,16 +18,22 @@
 
         <v-spacer></v-spacer>
 
-        <v-btn icon>
-          <v-icon>mdi-magnify</v-icon>
-        </v-btn>
+        <v-tooltip bottom>
+          <template v-slot:activator="{ on, attrs }">
+            <v-btn icon v-bind="attrs" v-on="on">
+              <v-icon>mdi-magnify</v-icon>
+            </v-btn>
+          </template>
+          <span style="font-size: 1.8vh">Buscar</span>
+        </v-tooltip>
 
         <v-dialog transition="dialog-bottom-transition" max-width="600">
           <template v-slot:activator="{ on, attrs }">
             <v-btn icon v-bind="attrs" v-on="on">
-              <v-icon color="grey">mdi-wallet-travel</v-icon>
+              <v-icon color="white">mdi-wallet-travel</v-icon>
             </v-btn>
           </template>
+
           <template v-slot:default="dialog">
             <v-card>
               <v-toolbar color="primary" dark>Proyectos</v-toolbar>
@@ -47,9 +53,14 @@
           to="/contacto"
           style="text-decoration: none; color: inherit"
         >
-          <v-btn icon>
-            <v-icon color="white">mdi-phone</v-icon>
-          </v-btn>
+          <v-tooltip bottom>
+            <template v-slot:activator="{ on, attrs }">
+              <v-btn icon v-bind="attrs" v-on="on">
+                <v-icon color="white">mdi-phone</v-icon>
+              </v-btn>
+            </template>
+            <span style="font-size: 1.8vh">Contacto</span>
+          </v-tooltip>
         </router-link>
       </v-app-bar>
 

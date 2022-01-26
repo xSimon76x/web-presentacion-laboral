@@ -1,6 +1,6 @@
 <template>
-  <div class="bg">
-    <v-container class="white lighten-5">
+  <div>
+    <v-card class="bg" tile dark lights-out>
       <v-row no-gutters style="flex-wrap: nowrap" align="center">
         <v-col cols="6" class="flex-grow-0 flex-shrink-0">
           <div class="d-flex justify-center mb-6" color="grey lighten-2" tile>
@@ -27,7 +27,7 @@
           </div>
         </v-col>
       </v-row>
-    </v-container>
+    </v-card>
   </div>
 </template>
 
@@ -39,7 +39,6 @@ export default {};
 .bg {
   padding-top: 6vh;
   padding-bottom: 6vh;
-  background-color: #ffffff;
 }
 .divPa {
   position: relative;

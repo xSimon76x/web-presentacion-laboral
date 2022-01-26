@@ -19,7 +19,6 @@
               height="100"
               width="100"
               style="position: relative"
-              :rounded="rounded"
             >
               <v-img
                 fixed
