@@ -10,19 +10,19 @@
                   2018</span
                 >
               </template>
-              <v-card class="mx-auto" max-width="250">
+              <v-card width="100%">
                 <v-img
                   src="../assets/img/fondos/info-duoc.jpg"
                   height="65px"
                 ></v-img>
 
                 <v-card-title class="titulosCard">
-                  <v-responsive>
-                    Inicio en Ingenieria en Informatica
-                  </v-responsive>
+                  <v-badge bordered color="green" inline left
+                    ><v-responsive>Ingenieria en Informatica</v-responsive>
+                  </v-badge>
                 </v-card-title>
 
-                <v-card-subtitle> San bernardo </v-card-subtitle>
+                <v-card-subtitle> San Bernardo </v-card-subtitle>
               </v-card>
             </v-timeline-item>
 
