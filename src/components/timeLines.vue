@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-container style="max-width: 600px">
+    <v-container style="max-width: 50vw">
       <v-row justify="space-around">
         <v-col cols="12" md="12" lg="12" sm="12">
           <v-timeline>
@@ -10,15 +10,15 @@
                   2018</span
                 >
               </template>
-              <v-card width="100%">
-                <v-img
+              <v-card width="30vw">
+                <!-- <v-img
                   src="../assets/img/fondos/info-duoc.jpg"
                   height="65px"
-                ></v-img>
+                ></v-img> -->
 
                 <v-card-title class="titulosCard">
                   <v-badge bordered color="green" inline left
-                    ><v-responsive>Ingenieria en Informatica</v-responsive>
+                    ><v-responsive> Ingenieria en Informatica</v-responsive>
                   </v-badge>
                 </v-card-title>
 
@@ -38,8 +38,12 @@
                   height="65px"
                 ></v-img>
 
-                <v-card-title class="titulosCard">
-                  <v-responsive> Practica Laboral </v-responsive>
+                <v-card-title class="titulosCard"
+                  ><v-badge bordered color="green" inline left>
+                    <v-badge bordered color="red" inline left>
+                      <v-responsive> Practica Laboral </v-responsive></v-badge
+                    ></v-badge
+                  >
                 </v-card-title>
 
                 <v-card-subtitle> San bernardo </v-card-subtitle>
@@ -58,9 +62,13 @@
                 ></v-img>
 
                 <v-card-title class="titulosCard">
-                  <v-responsive>
-                    Proyecto Citt / Xentric SA. (Practica Profesional)
-                  </v-responsive>
+                  <v-badge bordered color="green" inline left>
+                    <v-badge bordered color="red" inline left>
+                      <v-responsive>
+                        Proyecto Citt / Xentric SA. (Practica Profesional)
+                      </v-responsive></v-badge
+                    ></v-badge
+                  >
                 </v-card-title>
 
                 <v-card-subtitle>
@@ -82,9 +90,11 @@
                 ></v-img>
 
                 <v-card-title class="titulosCard">
-                  <v-responsive>
-                    Egreso en Ingeniería en Informática
-                  </v-responsive>
+                  <v-badge bordered color="red" inline left>
+                    <v-responsive>
+                      Egreso en Ingeniería en Informática
+                    </v-responsive></v-badge
+                  >
                 </v-card-title>
 
                 <v-card-subtitle> Duoc UC, Sede San Bernardo </v-card-subtitle>
