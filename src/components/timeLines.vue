@@ -1,8 +1,14 @@
 <template>
   <div>
-    <v-container style="max-width: 50vw">
+    <v-container style="max-width: auto">
       <v-row justify="space-around">
-        <v-col cols="12" md="12" lg="12" sm="12">
+        <v-col
+          cols="12"
+          md="12"
+          lg="12"
+          sm="12"
+          class="d-flex justify-center mb-6"
+        >
           <v-timeline>
             <v-timeline-item small color="orange">
               <template v-slot:opposite>
@@ -83,6 +89,7 @@
                   2021</span
                 >
               </template>
+
               <v-card class="mx-auto" max-width="250">
                 <v-img
                   src="../assets/img/fondos/info-duoc.jpg"
@@ -93,14 +100,30 @@
                   <v-badge bordered color="red" inline left>
                     <v-responsive>
                       Egreso en Ingeniería en Informática
-                    </v-responsive></v-badge
-                  >
+                    </v-responsive>
+                  </v-badge>
                 </v-card-title>
 
                 <v-card-subtitle> Duoc UC, Sede San Bernardo </v-card-subtitle>
               </v-card>
             </v-timeline-item>
           </v-timeline>
+        </v-col>
+      </v-row>
+      <v-row justify="space-around">
+        <v-col
+          cols="12"
+          lg="12"
+          md="12"
+          sm="12"
+          class="d-flex justify-center mb-6"
+        >
+          <div>
+            <v-badge inline left value="0" color="light blue"></v-badge>
+            <v-badge bordered color="green" inline left> Inicio </v-badge>
+            <v-divider class="mx-4" vertical></v-divider>
+            <v-badge bordered color="red" inline left> Finalizado </v-badge>
+          </div>
         </v-col>
       </v-row>
     </v-container>
@@ -120,7 +143,19 @@ export default {
       return this.events.slice().reverse();
     },
   },
+  computed: {
+    localAttrs() {
+      const attrs = {};
 
+      if (this.variant === "default") {
+        attrs.absolute = false;
+        attrs.fixed = false;
+      } else {
+        attrs[this.variant] = true;
+      }
+      return attrs;
+    },
+  },
   methods: {
     comment() {
       const time = new Date().toTimeString();
