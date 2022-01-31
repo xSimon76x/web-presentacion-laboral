@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-container style="max-width: auto">
+    <v-container>
       <v-row justify="space-around">
         <v-col
           cols="12"
@@ -9,26 +9,59 @@
           sm="12"
           class="d-flex justify-center mb-6"
         >
-          <v-timeline>
+          <v-timeline
+            style="
+              border-color: pink;
+              border-width: 5px;
+              border-style: dotted;
+              max-width: 60vw;
+              width: 50vw;
+            "
+          >
             <v-timeline-item small color="orange">
               <template v-slot:opposite>
                 <span :class="`annosLineTime font-weight-bold --text `">
                   2018</span
                 >
               </template>
-              <v-card width="30vw">
-                <!-- <v-img
+              <!-- <v-card elevation="2" class="mx-auto" max-width="344" outlined>
+                 <v-img
                   src="../assets/img/fondos/info-duoc.jpg"
                   height="65px"
-                ></v-img> -->
+                ></v-img> 
 
-                <v-card-title class="titulosCard">
-                  <v-badge bordered color="green" inline left
-                    ><v-responsive> Ingenieria en Informatica</v-responsive>
+                <v-card-title class="text-lg-h6 text-md-body-1 text-xl-h4">
+                  <v-badge bordered color="green" inline left>
+                    Ingenieria en Informatica
                   </v-badge>
                 </v-card-title>
 
-                <v-card-subtitle> San Bernardo </v-card-subtitle>
+                <v-card-subtitle class="text-caption">
+                  San Bernardo
+                </v-card-subtitle>
+              </v-card> -->
+              <v-card class="mx-auto" max-width="344">
+                <v-list-item three-line>
+                  <v-list-item-content>
+                    <!-- <div class="text-overline mb-4">OVERLINE</div> -->
+                    <v-list-item-title class="text-h5 mb-1">
+                      Ingenieria en Informatica
+                    </v-list-item-title>
+                    <v-list-item-subtitle
+                      >Sede San Bernardo</v-list-item-subtitle
+                    >
+                  </v-list-item-content>
+
+                  <v-list-item-avatar
+                    tile
+                    size="60"
+                    color="grey"
+                  ></v-list-item-avatar>
+                </v-list-item>
+
+                <!-- <v-card-actions>
+                  <v-btn outlined rounded text> Button </v-btn>
+                </v-card-actions> -->
               </v-card>
             </v-timeline-item>
 
