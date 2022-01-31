@@ -15,7 +15,7 @@
               border-width: 5px;
               border-style: dotted;
               max-width: 60vw;
-              width: 50vw;
+              width: 60vw;
             "
           >
             <v-timeline-item small color="orange">
@@ -43,7 +43,9 @@
               <v-card class="mx-auto" max-width="344">
                 <v-list-item three-line>
                   <v-list-item-content>
-                    <!-- <div class="text-overline mb-4">OVERLINE</div> -->
+                    <!-- <div class="text-overline mt-1">
+                      
+                    </div> -->
                     <v-list-item-title class="text-h5 mb-1">
                       Ingenieria en Informatica
                     </v-list-item-title>
@@ -51,17 +53,28 @@
                       >Sede San Bernardo</v-list-item-subtitle
                     >
                   </v-list-item-content>
-
                   <v-list-item-avatar
                     tile
                     size="60"
                     color="grey"
                   ></v-list-item-avatar>
+                  <!-- <div class="d-flex flex-column mb-1">
+                    
+                    <div class="d-flex justify-center mr-3">
+                      <v-badge bordered color="green" inline left> </v-badge>
+                      <v-badge bordered color="red" inline left> </v-badge>
+                    </div>
+                  </div> -->
                 </v-list-item>
-
-                <!-- <v-card-actions>
-                  <v-btn outlined rounded text> Button </v-btn>
-                </v-card-actions> -->
+                <v-card-text style="padding-top: 0px; padding-bottom: 0px">
+                  <div class="text--primary">
+                    relating to or dependent on charity; asdsdsssds sdasdsd
+                    sddddds
+                  </div>
+                </v-card-text>
+                <v-card-actions>
+                  <v-btn outlined rounded text> Ver Más </v-btn>
+                </v-card-actions>
               </v-card>
             </v-timeline-item>
 
