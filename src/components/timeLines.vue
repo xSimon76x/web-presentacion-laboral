@@ -53,11 +53,13 @@
                       >Sede San Bernardo</v-list-item-subtitle
                     >
                   </v-list-item-content>
-                  <v-list-item-avatar
-                    tile
-                    size="60"
-                    color="grey"
-                  ></v-list-item-avatar>
+                  <v-list-item-avatar tile size="50">
+                    <v-img
+                      tile
+                      src="../assets/img/logo/citt - duoc uc.jpg"
+                      style="max-height: 7vh; max-width: 4vw"
+                    ></v-img>
+                  </v-list-item-avatar>
                   <!-- <div class="d-flex flex-column mb-1">
                     
                     <div class="d-flex justify-center mr-3">
