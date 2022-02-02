@@ -14,147 +14,13 @@
               border-color: pink;
               border-width: 5px;
               border-style: dotted;
-              max-width: 60vw;
-              width: 60vw;
+              max-width: 100vw;
+              width: 100vw;
+              height: auto;
             "
           >
-            <v-timeline-item small color="orange">
-              <template v-slot:opposite>
-                <span :class="`annosLineTime font-weight-bold --text `">
-                  2018</span
-                >
-              </template>
-              <!-- <v-card elevation="2" class="mx-auto" max-width="344" outlined>
-                 <v-img
-                  src="../assets/img/fondos/info-duoc.jpg"
-                  height="65px"
-                ></v-img> 
-
-                <v-card-title class="text-lg-h6 text-md-body-1 text-xl-h4">
-                  <v-badge bordered color="green" inline left>
-                    Ingenieria en Informatica
-                  </v-badge>
-                </v-card-title>
-
-                <v-card-subtitle class="text-caption">
-                  San Bernardo
-                </v-card-subtitle>
-              </v-card> -->
-              <v-card class="mx-auto" max-width="344">
-                <v-list-item three-line>
-                  <v-list-item-content>
-                    <!-- <div class="text-overline mt-1">
-                      
-                    </div> -->
-                    <v-list-item-title class="text-h5 mb-1">
-                      Ingenieria en Informatica
-                    </v-list-item-title>
-                    <v-list-item-subtitle
-                      >Sede San Bernardo</v-list-item-subtitle
-                    >
-                  </v-list-item-content>
-                  <v-list-item-avatar tile size="50">
-                    <v-img
-                      tile
-                      src="../assets/img/logo/citt - duoc uc.jpg"
-                      style="max-height: 7vh; max-width: 4vw"
-                    ></v-img>
-                  </v-list-item-avatar>
-                  <!-- <div class="d-flex flex-column mb-1">
-                    
-                    <div class="d-flex justify-center mr-3">
-                      <v-badge bordered color="green" inline left> </v-badge>
-                      <v-badge bordered color="red" inline left> </v-badge>
-                    </div>
-                  </div> -->
-                </v-list-item>
-                <v-card-text style="padding-top: 0px; padding-bottom: 0px">
-                  <div class="text--primary">
-                    relating to or dependent on charity; asdsdsssds sdasdsd
-                    sddddds
-                  </div>
-                </v-card-text>
-                <v-card-actions>
-                  <v-btn outlined rounded text> Ver Más </v-btn>
-                </v-card-actions>
-              </v-card>
-            </v-timeline-item>
-
-            <v-timeline-item small color="orange">
-              <template v-slot:opposite>
-                <span :class="`annosLineTime font-weight-bold --text`">
-                  Ene 2020 - Feb 2020</span
-                >
-              </template>
-              <v-card class="mx-auto" max-width="250">
-                <v-img
-                  src="../assets/img/fondos/info-duoc.jpg"
-                  height="65px"
-                ></v-img>
-
-                <v-card-title class="titulosCard"
-                  ><v-badge bordered color="green" inline left>
-                    <v-badge bordered color="red" inline left>
-                      <v-responsive> Practica Laboral </v-responsive></v-badge
-                    ></v-badge
-                  >
-                </v-card-title>
-
-                <v-card-subtitle> San bernardo </v-card-subtitle>
-              </v-card>
-            </v-timeline-item>
-            <v-timeline-item class="mb-4" small color="orange">
-              <template v-slot:opposite>
-                <span :class="`annosLineTime font-weight-bold --text`">
-                  Jun 2021 - Nov 2021</span
-                >
-              </template>
-              <v-card class="mx-auto" max-width="250">
-                <v-img
-                  src="../assets/img/fondos/info-duoc.jpg"
-                  height="65px"
-                ></v-img>
-
-                <v-card-title class="titulosCard">
-                  <v-badge bordered color="green" inline left>
-                    <v-badge bordered color="red" inline left>
-                      <v-responsive>
-                        Proyecto Citt / Xentric SA. (Practica Profesional)
-                      </v-responsive></v-badge
-                    ></v-badge
-                  >
-                </v-card-title>
-
-                <v-card-subtitle>
-                  Citt - Duoc UC, Sede San Bernardo
-                </v-card-subtitle>
-              </v-card>
-            </v-timeline-item>
-
-            <v-timeline-item class="mb-4" small color="orange">
-              <template v-slot:opposite>
-                <span :class="`annosLineTime font-weight-bold --text`">
-                  2021</span
-                >
-              </template>
-
-              <v-card class="mx-auto" max-width="250">
-                <v-img
-                  src="../assets/img/fondos/info-duoc.jpg"
-                  height="65px"
-                ></v-img>
-
-                <v-card-title class="titulosCard">
-                  <v-badge bordered color="red" inline left>
-                    <v-responsive>
-                      Egreso en Ingeniería en Informática
-                    </v-responsive>
-                  </v-badge>
-                </v-card-title>
-
-                <v-card-subtitle> Duoc UC, Sede San Bernardo </v-card-subtitle>
-              </v-card>
-            </v-timeline-item>
+            <!-- componente que trae las card -->
+            <cardTimLin />
           </v-timeline>
         </v-col>
       </v-row>
@@ -179,7 +45,11 @@
 </template>
 
 <script>
+import cardTimLin from "../components/cardTimeLine.vue";
 export default {
+  components: {
+    cardTimLin,
+  },
   data: () => ({
     events: [],
     input: null,
@@ -190,8 +60,6 @@ export default {
     timeline() {
       return this.events.slice().reverse();
     },
-  },
-  computed: {
     localAttrs() {
       const attrs = {};
 
@@ -232,7 +100,6 @@ export default {
   font: Roboto;
   size: 1rem;
   letter-spacing: 0.009375em;
-  weight: 400;
 }
 .imagenCentro {
   position: absolute;
@@ -246,5 +113,11 @@ export default {
 }
 .titulosCard {
   font-size: 3vh;
+}
+.v-card--reveal {
+  bottom: 0;
+  opacity: 1 !important;
+  position: absolute;
+  width: 100%;
 }
 </style>
