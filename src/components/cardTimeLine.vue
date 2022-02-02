@@ -12,7 +12,7 @@
         >
       </template>
 
-      <v-card class="mx-auto" max-width="344" height="226">
+      <v-card class="mx-auto" max-width="345" height="226">
         <v-list-item three-line>
           <v-list-item-content>
             <!-- <div class="text-overline mt-1">
@@ -40,11 +40,41 @@
           </div>
         </v-card-text>
         <v-card-actions>
-          <v-btn color="teal accent-4" text @click="reveal = true">
-            Ver Más
-          </v-btn>
+          <v-dialog v-model="dialog" persistent max-width="290">
+            <template v-slot:activator="{ on, attrs }">
+              <v-btn
+                color="teal accent-4"
+                text
+                @click="reveal = true"
+                v-bind="attrs"
+                v-on="on"
+              >
+                Ver Más
+              </v-btn>
+            </template>
+            <v-card>
+              <v-card-title class="text-h5">
+                Use Google's location service?
+              </v-card-title>
+              <v-card-text
+                >Let Google help apps determine location. This means sending
+                anonymous location data to Google, even when no apps are
+                running.</v-card-text
+              >
+              <v-card-actions>
+                <v-spacer></v-spacer>
+                <v-btn color="green darken-1" text @click="reveal = false">
+                  Disagree
+                </v-btn>
+                <v-btn color="green darken-1" text @click="reveal = false">
+                  Agree
+                </v-btn>
+              </v-card-actions>
+            </v-card>
+          </v-dialog>
         </v-card-actions>
-        <v-expand-transition>
+
+        <!-- <v-expand-transition>
           <v-card
             v-if="reveal"
             class="transition-fast-in-fast-out v-card--reveal"
@@ -86,7 +116,7 @@
               </v-tooltip>
             </v-card-actions>
           </v-card>
-        </v-expand-transition>
+        </v-expand-transition> -->
       </v-card>
     </v-timeline-item>
   </div>

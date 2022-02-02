@@ -14,8 +14,8 @@
               border-color: pink;
               border-width: 5px;
               border-style: dotted;
-              max-width: 100vw;
-              width: 100vw;
+              max-width: 80vw;
+              width: 60vw;
               height: auto;
             "
           >
