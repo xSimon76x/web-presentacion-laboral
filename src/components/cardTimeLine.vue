@@ -12,7 +12,7 @@
         >
       </template>
 
-      <v-card class="mx-auto" max-width="345" height="226">
+      <v-card class="mx-auto" max-width="345" height="auto">
         <v-list-item three-line>
           <v-list-item-content>
             <!-- <div class="text-overline mt-1">
@@ -40,129 +40,66 @@
           </div>
         </v-card-text>
         <v-card-actions>
-          <v-dialog v-model="dialog" persistent max-width="290">
-            <template v-slot:activator="{ on, attrs }">
-              <v-btn
-                color="teal accent-4"
-                text
-                @click="reveal = true"
-                v-bind="attrs"
-                v-on="on"
-              >
-                Ver Más
-              </v-btn>
-            </template>
-            <v-card>
-              <v-card-title class="text-h5">
-                Use Google's location service?
-              </v-card-title>
-              <v-card-text
-                >Let Google help apps determine location. This means sending
-                anonymous location data to Google, even when no apps are
-                running.</v-card-text
-              >
-              <v-card-actions>
-                <v-spacer></v-spacer>
-                <v-btn color="green darken-1" text @click="reveal = false">
-                  Disagree
-                </v-btn>
-                <v-btn color="green darken-1" text @click="reveal = false">
-                  Agree
-                </v-btn>
-              </v-card-actions>
-            </v-card>
-          </v-dialog>
+          <!-- Componente de ver mas en el card -->
+          <vMasLT :objCards="objCards" :valId="obj.id" :redirect="redirect" />
         </v-card-actions>
-
-        <!-- <v-expand-transition>
-          <v-card
-            v-if="reveal"
-            class="transition-fast-in-fast-out v-card--reveal"
-            style="height: auto"
-          >
-            <v-card-text style="padding-bottom: 0px">
-              <p class="text-h5 text--primary">
-                <v-badge bordered color="green" inline left>
-                  {{ obj.titulo }}
-                </v-badge>
-              </p>
-              <p class="text-caption" style="padding-bottom: 0px">
-                {{ obj.descExtendida }}
-              </p>
-            </v-card-text>
-            <v-card-actions style="padding-top: 0px">
-              <v-btn text color="teal accent-4" @click="reveal = false">
-                Cerrar
-              </v-btn>
-              <v-tooltip
-                top
-                v-if="
-                  obj.titulo ===
-                  'Proyecto Citt / Xentric SA. (Practica Profesional)'
-                "
-              >
-                <template v-slot:activator="{ on, attrs }">
-                  <v-btn
-                    v-bind="attrs"
-                    v-on="on"
-                    text
-                    color="teal accent-4"
-                    @click="redirect(obj.urlLinkedin)"
-                  >
-                    <v-icon size="20px"> mdi-linkedin </v-icon>
-                  </v-btn>
-                </template>
-                <span style="font-size: 1.8vh">Publicación en Linkedin</span>
-              </v-tooltip>
-            </v-card-actions>
-          </v-card>
-        </v-expand-transition> -->
       </v-card>
     </v-timeline-item>
   </div>
 </template>
 
 <script>
+import vMasLT from "../components/verMasLineTime.vue";
 export default {
+  components: { vMasLT },
   data: () => ({
     events: [],
     input: null,
     nonce: 0,
+    valId: 0,
     reveal: false,
     objCards: [
       {
+        id: 0,
         titulo: "Ingenieria en Informatica",
         sub: "Sede San Bernardo",
         img: require("@/assets/img/logo/Logo_DuocUC.png"),
+        imgExt: require("@/assets/img/fondos/duoc-sede-san-bernardo.jpg"),
         desc: "Comienzo de carrera de ingenieria en informatica, introduciendome en el aprendizaje de bases de datos relacionales...",
         descExtendida:
           "Comienzo de carrera de ingenieria en informatica, introduciendome en el aprendizaje de bases de datos relacionales, algunos lenguajes de programación de los cuales me enfoque más, conociendo y aprendiendo metodologias de trabajo.",
         fecha: "Mar 2018",
       },
       {
+        id: 1,
         titulo: "Practica Laboral",
         sub: "Departamento de Informatica (PUC)",
         img: require("@/assets/img/logo/Pontificia_universidad_catolica_de_chile - puc.png"),
+        imgExt: require("@/assets/img/fondos/DI-uc.jpg"),
         desc: "Oportunidad de practica laboral en el departamento de informatica en la Universidad Catolica...",
         descExtendida:
           "Oportunidad de practica laboral en el departamento de informatica en la Universidad Catolica, Estuve  enfocado  en  la  actualización  de componentes programados en PHP 5, a la versión de PHP 7.0, trabajé dentro del Framework de CodeIgniter 3.",
         fecha: "Ene 2020 - Feb 2020",
       },
       {
+        id: 2,
         titulo: "Proyecto Citt / Xentric SA. (Practica Profesional)",
         sub: "Citt - Duoc UC, Sede San Bernardo (100% remoto)",
         img: require("@/assets/img/logo/citt - duoc uc.jpg"),
+        imgExt: require("@/assets/img/fondos/citt-duoc-uc.png"),
         desc: "Participación en el proyecto *Analítica CX* entre el Citt de Duoc UC y la empresa Xentric SA...",
         descExtendida:
-          "Participación en el proyecto *Analítica CX* entre el Citt de Duoc UC y la empresa Xentric SA. Estuve enfocado en liderar a un equipo que se centró en la creación de  la  plataforma  web  para  la  empresa,  trabajando  con  tecnologías  como  con Flask (Python), MongoDB y JQuery (JS)..",
+          "Participación en el proyecto *Analítica CX* entre el Citt de Duoc UC y la empresa Xentric SA. Estuve enfocado en liderar a un equipo que se centró en la creación de  la  plataforma  web  para  la  empresa,  trabajando  con  tecnologías  como  con Flask (Python), MongoDB y JQuery (JS).",
         fecha: "Jun 2021 - Nov 2021 ",
         urlLinkedin:
           "https://www.linkedin.com/posts/simon-bustamante-venegas_quiero-compartir-el-orgullo-que-me-hace-sentir-activity-6877388888483090432-cy07",
       },
       {
+        id: 3,
         titulo: "Egreso en Ingeniería en Informática",
         sub: "Sede San Bernardo",
         img: require("@/assets/img/logo/Logo_DuocUC.png"),
+        imgExt: require("../assets/img/fondos/duoc-sede-san-bernardo.jpg"),
         desc: "Finalización de carrera profesional en el instituto Duoc UC...",
         descExtendida:
           "Finalización de carrera profesional en el instituto Duoc UC, adquiriendo habilidades tanto tecnicas como *blandas* para poner en practica, y con cierta experiencia en el desarrollo web, gracias al proyecto entre el Citt (Duoc UC) y Xentric SA.",

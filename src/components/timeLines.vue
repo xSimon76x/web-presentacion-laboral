@@ -9,16 +9,10 @@
           sm="12"
           class="d-flex justify-center mb-6"
         >
-          <v-timeline
-            style="
-              border-color: pink;
-              border-width: 5px;
-              border-style: dotted;
-              max-width: 80vw;
-              width: 60vw;
-              height: auto;
-            "
-          >
+          <!-- border-color: pink; 
+           border-width: 5px;
+              border-style: dotted;-->
+          <v-timeline style="max-width: 80vw; width: 60vw; height: auto">
             <!-- componente que trae las card -->
             <cardTimLin />
           </v-timeline>
