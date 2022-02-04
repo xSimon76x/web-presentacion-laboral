@@ -14,7 +14,24 @@
           class="flex-grow-0 flex-shrink-1"
         >
           <div class="d-flex pa-2" outlined tile>
-            <p>
+            <v-sheet
+              color="white"
+              elevation="5"
+              height="108"
+              width="250"
+              rounded
+            >
+              <div class="d-flex flex-row">
+                <v-img
+                  max-height="100%"
+                  max-width="40%"
+                  style="border-radius: 50%"
+                  src="../assets/img/logo/imgPerfil.png"
+                ></v-img>
+                <h1>Simón Bustamante</h1>
+              </div>
+            </v-sheet>
+            <!-- <p>
               Hola! soy un profesional que acaba de egresar en ingeniería en
               informatica, cuento con experiencia básica en el desarrollo web en
               Python - Flask, gracias a la experiencia que obtuve durante mi
@@ -23,7 +40,7 @@
               área profesional y personal, manteniendo mi motivación por
               aprender cualquier tecnología y metodología, que requiera la
               empresa para optar por la oportunidad de trabajar con ellos.
-            </p>
+            </p> -->
           </div>
         </v-col>
       </v-row>
