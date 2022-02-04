@@ -12,22 +12,26 @@
           Ver Más
         </v-btn>
       </template>
-      <v-card>
+      <v-card height="auto">
         <div v-for="obj in objCards" :key="obj.id">
           <template v-if="obj.id === valId">
-            <v-img height="150" :src="obj.imgExt"></v-img>
+            <v-img v-bind:src="obj.imgExt" lazy-src="obj.imgExt">
+              <template v-slot:placeholder>
+                <v-row class="fill-height ma-0" align="center" justify="center">
+                  <v-progress-circular
+                    indeterminate
+                    color="grey lighten-5"
+                  ></v-progress-circular>
+                </v-row>
+              </template>
+            </v-img>
+
             <v-card-title class="text-h5">
               {{ obj.titulo }}
             </v-card-title>
             <v-card-text>{{ obj.descExtendida }}</v-card-text>
             <div class="d-flex justify-center">
-              <v-tooltip
-                top
-                v-if="
-                  obj.titulo ===
-                  'Proyecto Citt / Xentric SA. (Practica Profesional)'
-                "
-              >
+              <v-tooltip top v-if="obj.id === 2">
                 <template v-slot:activator="{ on, attrs }">
                   <v-btn
                     v-bind="attrs"

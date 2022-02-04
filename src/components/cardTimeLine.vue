@@ -12,7 +12,7 @@
         >
       </template>
 
-      <v-card class="mx-auto" max-width="345" height="auto">
+      <v-card class="mx-auto" max-width="100%" height="auto">
         <v-list-item three-line>
           <v-list-item-content>
             <!-- <div class="text-overline mt-1">
@@ -64,7 +64,7 @@ export default {
         titulo: "Ingenieria en Informatica",
         sub: "Sede San Bernardo",
         img: require("@/assets/img/logo/Logo_DuocUC.png"),
-        imgExt: require("@/assets/img/fondos/duoc-sede-san-bernardo.jpg"),
+        imgExt: require("@/assets/img/fondos/duoc-sede-san-bernardo.png"),
         desc: "Comienzo de carrera de ingenieria en informatica, introduciendome en el aprendizaje de bases de datos relacionales...",
         descExtendida:
           "Comienzo de carrera de ingenieria en informatica, introduciendome en el aprendizaje de bases de datos relacionales, algunos lenguajes de programación de los cuales me enfoque más, conociendo y aprendiendo metodologias de trabajo.",
@@ -75,7 +75,7 @@ export default {
         titulo: "Practica Laboral",
         sub: "Departamento de Informatica (PUC)",
         img: require("@/assets/img/logo/Pontificia_universidad_catolica_de_chile - puc.png"),
-        imgExt: require("@/assets/img/fondos/DI-uc.jpg"),
+        imgExt: require("@/assets/img/fondos/DI-uc.png"),
         desc: "Oportunidad de practica laboral en el departamento de informatica en la Universidad Catolica...",
         descExtendida:
           "Oportunidad de practica laboral en el departamento de informatica en la Universidad Catolica, Estuve  enfocado  en  la  actualización  de componentes programados en PHP 5, a la versión de PHP 7.0, trabajé dentro del Framework de CodeIgniter 3.",
@@ -83,13 +83,13 @@ export default {
       },
       {
         id: 2,
-        titulo: "Proyecto Citt / Xentric SA. (Practica Profesional)",
-        sub: "Citt - Duoc UC, Sede San Bernardo (100% remoto)",
+        titulo: "Proyecto Analítica CX",
+        sub: "Sede San Bernardo (100% remoto)",
         img: require("@/assets/img/logo/citt - duoc uc.jpg"),
-        imgExt: require("@/assets/img/fondos/citt-duoc-uc.png"),
+        imgExt: require("@/assets/img/fondos/citt-duoc-uc2.png"),
         desc: "Participación en el proyecto *Analítica CX* entre el Citt de Duoc UC y la empresa Xentric SA...",
         descExtendida:
-          "Participación en el proyecto *Analítica CX* entre el Citt de Duoc UC y la empresa Xentric SA. Estuve enfocado en liderar a un equipo que se centró en la creación de  la  plataforma  web  para  la  empresa,  trabajando  con  tecnologías  como  con Flask (Python), MongoDB y JQuery (JS).",
+          "Participación en el proyecto *Analítica CX* entre el Citt de Duoc UC y la empresa Xentric SA. Estuve enfocado en liderar a un equipo que se centró en la creación de  la  plataforma  web  para  la  empresa Xentric,  trabajando  con  tecnologías  como  con Flask (Python), MongoDB, HTML, JQuery (JS), Css y Git Hub. Así bien, esta fue una oportunidad para poder convalidar mi practica profesional, y mi portafolio de titulo, que por motivos de confidencialidad, no puedo adjuntar dicho repositorio. ",
         fecha: "Jun 2021 - Nov 2021 ",
         urlLinkedin:
           "https://www.linkedin.com/posts/simon-bustamante-venegas_quiero-compartir-el-orgullo-que-me-hace-sentir-activity-6877388888483090432-cy07",
@@ -99,7 +99,7 @@ export default {
         titulo: "Egreso en Ingeniería en Informática",
         sub: "Sede San Bernardo",
         img: require("@/assets/img/logo/Logo_DuocUC.png"),
-        imgExt: require("../assets/img/fondos/duoc-sede-san-bernardo.jpg"),
+        imgExt: require("../assets/img/fondos/duoc-sede-san-bernardo.png"),
         desc: "Finalización de carrera profesional en el instituto Duoc UC...",
         descExtendida:
           "Finalización de carrera profesional en el instituto Duoc UC, adquiriendo habilidades tanto tecnicas como *blandas* para poner en practica, y con cierta experiencia en el desarrollo web, gracias al proyecto entre el Citt (Duoc UC) y Xentric SA.",

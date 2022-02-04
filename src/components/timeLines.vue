@@ -1,24 +1,47 @@
 <template>
   <div>
     <v-container>
+      <v-row>
+        <v-col
+          cols="12"
+          md="12"
+          lg="12"
+          sm="12"
+          xs="12"
+          class="d-flex justify-center pb-2 pt-8"
+        >
+          <h1>MI CAMINO NINJA</h1>
+        </v-col>
+      </v-row>
       <v-row justify="space-around">
         <v-col
           cols="12"
           md="12"
           lg="12"
           sm="12"
-          class="d-flex justify-center mb-6"
+          xs="12"
+          class="d-flex justify-center pb-8 pt-8"
         >
           <!-- border-color: pink; 
            border-width: 5px;
               border-style: dotted;-->
-          <v-timeline style="max-width: 80vw; width: 60vw; height: auto">
+          <v-timeline
+            style="
+              min-width: 70%;
+              max-width: 100%;
+              height: auto;
+              border-color: pink;
+              border-width: 5px;
+              border-style: do6ted;
+            "
+            xs="12"
+          >
             <!-- componente que trae las card -->
             <cardTimLin />
           </v-timeline>
         </v-col>
       </v-row>
-      <v-row justify="space-around">
+      <!-- <v-row justify="space-around">
         <v-col
           cols="12"
           lg="12"
@@ -33,7 +56,7 @@
             <v-badge bordered color="red" inline left> Finalizado </v-badge>
           </div>
         </v-col>
-      </v-row>
+      </v-row> -->
     </v-container>
   </div>
 </template>
