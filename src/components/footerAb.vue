@@ -2,7 +2,7 @@
   <div>
     <v-footer v-bind="localAttrs" dark :padless="true">
       <v-card flat tile width="100%" class="text-center">
-        <v-card-text class="blue lighten-1 text-center py-0">
+        <!-- <v-card-text class="blue lighten-1 text-center py-0">
           <v-btn
             @click="red(link.url)"
             v-for="link in links"
@@ -20,7 +20,7 @@
               <span style="font-size: 1.8vh">{{ link.name }}</span>
             </v-tooltip>
           </v-btn>
-        </v-card-text>
+        </v-card-text> -->
         <v-divider></v-divider>
         <v-card-text class="py-2 white--text text-center textFooter">
           Todos los derechos reservados por
