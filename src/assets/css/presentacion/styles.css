@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+.container_all {
+  position: relative;
+  right: 0;
+  transition: all 300ms;
+}
+
+body {
+  display: block;
+}
+/* cover */
+.cover {
+  width: 100%;
+  padding-bottom: 120px;
+  font-family: "Poppins", sans-serif;
+  padding-top: 100px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Wave inicio */
+.bg_color {
+  width: 100%;
+  height: 70%;
+  background: #2196f3;
+  position: absolute;
+  top: 0;
+}
+
+.wave {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 150px;
+  left: 0%;
+  background-image: url("../../img/extras/wd1.svg");
+  background-position: bottom;
+}
+.w1 {
+  animation: w1 7s linear infinite;
+}
+
+.w2 {
+  animation: w2 7s linear -0.125s infinite,
+    desplazamiento 7s ease -0.125s infinite;
+  opacity: 0.5;
+}
+
+@keyframes w1 {
+  0% {
+    margin-left: 0;
+  }
+  100% {
+    margin-left: -1600px;
+  }
+}
+
+@keyframes w2 {
+  0% {
+    margin-left: 0;
+  }
+  100% {
+    margin-left: -1600px;
+  }
+}
+
+@keyframes desplazamiento {
+  0%,
+  100% {
+    transform: translateY(-25px);
+  }
+
+  50% {
+    transform: translateY(10px);
+  }
+}
+/*WAVE FINAL*/

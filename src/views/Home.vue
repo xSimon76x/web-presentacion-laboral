@@ -1,7 +1,8 @@
 <template>
   <div>
     <nBar />
-    <iPres />
+    <preS />
+    <!-- <iPres /> -->
     <!-- <hello-world /> -->
     <pFil />
     <fonHome />
@@ -12,6 +13,7 @@
 </template>
 
 <script>
+import preS from "../components/presentacion.vue";
 import HelloWorld from "../components/HelloWorld";
 // Dentro de nDrawes esta el menu y la exportacion del componente navBar
 import hBil from "../components/habilidades.vue";
@@ -29,6 +31,7 @@ export default {
     HelloWorld,
     nBar,
     pFil,
+    preS,
     iPres,
     hBil,
     fonHome,
