@@ -1,7 +1,14 @@
 <template>
   <div>
-    <v-card class="bg" tile dark lights-out>
-      <v-row no-gutters style="flex-wrap: nowrap" align="center">
+    <!-- tile dark  -->
+    <v-card class="bg" elevation="0">
+      <v-row
+        no-gutters
+        tile
+        lights-out
+        style="flex-wrap: nowrap"
+        align="center"
+      >
         <v-col
           cols="12"
           style="min-width: 100px"
@@ -48,7 +55,7 @@
                   </h2>
                   <h4
                     class="font-weight-bold mb-5 text-center align-center"
-                    style="color: blue; font-size: 80%"
+                    style="color: #0f446e; font-size: 80%"
                   >
                     Desarrollador Junior
                   </h4>
@@ -187,6 +194,7 @@ p {
 .bg {
   padding-top: 6vh;
   padding-bottom: 6vh;
+  border-color: white;
 }
 .divPa {
   position: relative;

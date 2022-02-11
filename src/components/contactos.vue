@@ -1,7 +1,14 @@
 <template>
-  <div class="contenedor">
-    <v-row>
-      <v-col class="d-flex justify-center mb-6">
+  <div class="contenedor" elevation="0">
+    <v-row no-gutters class="d-flex justify-center">
+      <v-col
+        cols="8"
+        sm="12"
+        md="12"
+        xs="12"
+        lg="8"
+        class="d-flex justify-center mb-6"
+      >
         <v-card
           class="overflow-hidden card"
           color="blue lighten-1"
@@ -60,6 +67,25 @@
           <!-- <v-snackbar v-model="hasSaved" :timeout="2000" absolute bottom left>
             Tu correo ha sido enviado a Simon Bustamante Venegas
           </v-snackbar> -->
+        </v-card>
+      </v-col>
+      <v-col cols="4" sm="12" md="12" lg="4" class="d-flex justify-center mb-6">
+        <v-card
+          class="overflow-hidden card"
+          color="white lighten-1"
+          dark
+          elevation="10"
+          width="90%"
+          height="68vh"
+        >
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26545.60258816497!2d-70.76377280365372!3d-33.72963571445844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9663210c269fb48f%3A0x1b1f7184e32f4c9d!2sBuin%2C%20Regi%C3%B3n%20Metropolitana!5e0!3m2!1ses-419!2scl!4v1644557947568!5m2!1ses-419!2scl"
+            width="100%"
+            height="100%"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
         </v-card>
       </v-col>
     </v-row>

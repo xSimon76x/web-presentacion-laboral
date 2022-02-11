@@ -3,7 +3,7 @@
     <v-dialog v-model="reveal" persistent max-width="600">
       <template v-slot:activator="{ on, attrs }">
         <v-btn
-          color="teal accent-4"
+          color="cyan accent-4"
           text
           @click="reveal = true"
           v-bind="attrs"

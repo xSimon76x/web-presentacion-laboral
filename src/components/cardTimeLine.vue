@@ -2,7 +2,7 @@
   <div>
     <v-timeline-item
       small
-      color="orange"
+      color="blue"
       v-for="obj in objCards"
       :key="obj.titulo"
     >

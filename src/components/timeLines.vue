@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-container>
+    <v-container elevation="0">
       <v-row>
         <v-col
           cols="12"
@@ -26,37 +26,15 @@
            border-width: 5px;
               border-style: dotted;-->
           <v-timeline
-            style="
-              min-width: 70%;
-              max-width: 100%;
-              height: auto;
-              border-color: pink;
-              border-width: 5px;
-              border-style: do6ted;
-            "
+            style="min-width: 70%; max-width: 100%; height: auto"
             xs="12"
+            color="blue"
           >
             <!-- componente que trae las card -->
             <cardTimLin />
           </v-timeline>
         </v-col>
       </v-row>
-      <!-- <v-row justify="space-around">
-        <v-col
-          cols="12"
-          lg="12"
-          md="12"
-          sm="12"
-          class="d-flex justify-center mb-6"
-        >
-          <div>
-            <v-badge inline left value="0" color="light blue"></v-badge>
-            <v-badge bordered color="green" inline left> Inicio </v-badge>
-            <v-divider class="mx-4" vertical></v-divider>
-            <v-badge bordered color="red" inline left> Finalizado </v-badge>
-          </div>
-        </v-col>
-      </v-row> -->
     </v-container>
   </div>
 </template>

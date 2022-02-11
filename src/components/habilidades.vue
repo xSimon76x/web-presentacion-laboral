@@ -1,5 +1,5 @@
 <template>
-  <div class="divContainer">
+  <div class="divContainer" elevation="0">
     <div class="d-flex justify-center mb-6">
       <h1 class="pa-2" outlined tile height="100">Conocimientos</h1>
     </div>
@@ -71,6 +71,18 @@ export default {
         wd: "auto",
         hg: "100%",
       },
+      {
+        url: require("@/assets/logo.png"),
+        alt: "vue",
+        wd: "auto",
+        hg: "100%",
+      },
+      {
+        url: require("@/assets/img/logo/vuetify2.0.png"),
+        alt: "vuetify",
+        wd: "auto",
+        hg: "100%",
+      },
     ],
   }),
 };
@@ -84,4 +96,25 @@ export default {
   padding-top: 6vh;
   padding-bottom: 10vh;
 }
+/* start shape top */
+.custom-shape-divider-top-1644554184 {
+  position: absolute;
+  top: auto;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1644554184 svg {
+  position: relative;
+  display: block;
+  width: calc(129% + 1.3px);
+  height: 97px;
+}
+
+.custom-shape-divider-top-1644554184 .shape-fill {
+  fill: red;
+}
+/* end shape top */
 </style>
