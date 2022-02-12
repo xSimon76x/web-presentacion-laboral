@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
-import Contact from '../views/Contact.vue'
+
 // import navBar from '../views/navBarView.vue'
 
 
@@ -20,7 +20,11 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/Contact.vue')
-  } 
+  },{
+    path: '/proyectos',
+    name: 'proyectos',
+    component: () => import('../views/Proyects.vue')
+  }
 ]
 
 const router = new VueRouter({

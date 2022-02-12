@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-footer v-bind="localAttrs" dark :padless="true">
-      <v-card flat tile width="100%" class="text-center">
+      <v-card flat tile width="100%" class="text-center deep-purple darken-4">
         <!-- <v-card-text class="blue lighten-1 text-center py-0">
           <v-btn
             @click="red(link.url)"

@@ -1,13 +1,14 @@
 <template>
   <div>
-    <v-card flat tile dark lights-out fixed>
-      <v-app-bar elevation="1">
+    <v-card flat tile fixed>
+      <v-app-bar absolute elevation="0" color="transparent">
         <!--absolute para que no este fijo mientras se hace scroll en la vista-->
         <template v-slot:img="{ props }">
           <v-img class="back" v-bind="props"></v-img>
         </template>
 
         <v-app-bar-nav-icon
+          color="black"
           @click.stop="drawerPadre = !drawerPadre"
         ></v-app-bar-nav-icon>
         <!-- click.stop -->
@@ -17,20 +18,21 @@
         </v-toolbar-title>
 
         <v-spacer></v-spacer>
-
-        <v-tooltip bottom>
-          <template v-slot:activator="{ on, attrs }">
-            <v-btn icon v-bind="attrs" v-on="on">
-              <v-icon>mdi-magnify</v-icon>
-            </v-btn>
-          </template>
-          <span style="font-size: 1.8vh">Buscar</span>
-        </v-tooltip>
+        <router-link to="/" style="text-decoration: none; color: inherit">
+          <v-tooltip bottom>
+            <template v-slot:activator="{ on, attrs }">
+              <v-btn icon v-bind="attrs" v-on="on">
+                <v-icon color="black">mdi-home</v-icon>
+              </v-btn>
+            </template>
+            <span style="font-size: 1.8vh">Inicio</span>
+          </v-tooltip>
+        </router-link>
 
         <v-dialog transition="dialog-bottom-transition" max-width="600">
           <template v-slot:activator="{ on, attrs }">
             <v-btn icon v-bind="attrs" v-on="on">
-              <v-icon color="white">mdi-wallet-travel</v-icon>
+              <v-icon color="black">mdi-wallet-travel</v-icon>
             </v-btn>
           </template>
 
@@ -56,7 +58,7 @@
           <v-tooltip bottom>
             <template v-slot:activator="{ on, attrs }">
               <v-btn icon v-bind="attrs" v-on="on">
-                <v-icon color="white">mdi-phone</v-icon>
+                <v-icon color="black">mdi-phone</v-icon>
               </v-btn>
             </template>
             <span style="font-size: 1.8vh">Contacto</span>
@@ -196,7 +198,7 @@ export default {
 
 <style scoped lang="scss">
 .back {
-  background: #1f1e1e;
+  background: transparent;
   // 1f1e1e
 }
 </style>

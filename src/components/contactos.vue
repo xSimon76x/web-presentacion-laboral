@@ -2,9 +2,9 @@
   <div class="contenedor" elevation="0">
     <v-row no-gutters class="d-flex justify-center">
       <v-col
-        cols="8"
+        cols="12"
         sm="12"
-        md="12"
+        md="8"
         xs="12"
         lg="8"
         class="d-flex justify-center mb-6"
@@ -69,7 +69,14 @@
           </v-snackbar> -->
         </v-card>
       </v-col>
-      <v-col cols="4" sm="12" md="12" lg="4" class="d-flex justify-center mb-6">
+      <v-col
+        cols="12"
+        xs="12"
+        sm="12"
+        md="4"
+        lg="4"
+        class="d-flex justify-center mb-6"
+      >
         <v-card
           class="overflow-hidden card"
           color="white lighten-1"
