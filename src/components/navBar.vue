@@ -29,28 +29,20 @@
           </v-tooltip>
         </router-link>
 
-        <v-dialog transition="dialog-bottom-transition" max-width="600">
-          <template v-slot:activator="{ on, attrs }">
-            <v-btn icon v-bind="attrs" v-on="on">
-              <v-icon color="black">mdi-wallet-travel</v-icon>
-            </v-btn>
-          </template>
+        <router-link
+          to="/proyectos"
+          style="text-decoration: none; color: inherit"
+        >
+          <v-tooltip bottom>
+            <template v-slot:activator="{ on, attrs }">
+              <v-btn icon v-bind="attrs" v-on="on">
+                <v-icon color="black">mdi-wallet-travel</v-icon>
+              </v-btn>
+            </template>
+            <span style="font-size: 1.8vh">Proyectos</span>
+          </v-tooltip>
+        </router-link>
 
-          <template v-slot:default="dialog">
-            <v-card>
-              <v-toolbar color="primary" dark>Proyectos</v-toolbar>
-              <v-card-text>
-                <div class="text-h5 pa-12">
-                  En proceso...pienso realizar una vista dedicada a los
-                  proyectos, relacionada con visualizar el repositorio de github
-                </div>
-              </v-card-text>
-              <v-card-actions class="justify-end">
-                <v-btn text @click="dialog.value = false">Cerrar</v-btn>
-              </v-card-actions>
-            </v-card>
-          </template>
-        </v-dialog>
         <router-link
           to="/contacto"
           style="text-decoration: none; color: inherit"
@@ -184,7 +176,7 @@ export default {
       drawerPadre: false,
       items: [
         { title: "Inicio", icon: "mdi-home", route: "/" },
-        // { title: "Proyectos", icon: "mdi-wallet-travel", route: "/" },
+        { title: "Proyectos", icon: "mdi-wallet-travel", route: "/proyectos" },
         { title: "Contactos", icon: "mdi-phone", route: "/contacto" },
       ],
     };
