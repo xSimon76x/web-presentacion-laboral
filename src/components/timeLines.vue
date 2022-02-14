@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-container elevation="0">
-      <v-row>
+      <v-row class="pt-12">
         <v-col
           cols="12"
           md="12"
@@ -10,7 +10,7 @@
           xs="12"
           class="d-flex justify-center pb-2 pt-8"
         >
-          <h1>MI CAMINO NINJA</h1>
+          <h1 class="tituloView font-weight-bold text-center">Mi Historia</h1>
         </v-col>
       </v-row>
       <v-row justify="space-around">

@@ -1,10 +1,12 @@
 <template>
   <v-container>
-    <div class="d-flex flex-column mb-6">
-      <div class="d-flex justify-center">
-        <h1 class="title is-spaced is-size-3-desktop is-size-4-mobile">
-          PROYECTOS
-        </h1>
+    <div class="d-flex flex-column pb-12 pt-12">
+      <div class="d-flex flex-column">
+        <h1 class="tituloView font-weight-bold text-center">Mis Proyectos</h1>
+        <p class="parrProy text-center">
+          Aqui se veran algunos de los proyectos, en donde por un lado he
+          desarrollado, y otros de los cuales he participado.
+        </p>
       </div>
       <div class="containerPro">
         <!-- <v-row class="row">
@@ -28,23 +30,29 @@
           <v-img class="imgBack" :src="objProy.img"></v-img>
           <div class="contenidoText">
             <h3>{{ objProy.titulo }}</h3>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque,
-              autem in! Perferendis provident eius obcaecati ad soluta debitis
-              molestiae quae, nihil beatae delectus! Quae molestias quod,
-              sapiente accusamus vero a!
+            <p class="descripcion">
+              {{ objProy.p }}
             </p>
-
-            <div class="d-flex justify-center mx-1">
-              <v-img
-                v-for="(ics, index) in objProy.iconos"
-                :key="index"
-                class="icons"
-                :src="ics"
-              ></v-img>
-
-              <!-- <p>{{ icons(objProy.titulo) }}</p> -->
-            </div>
+            <p v-if="objProy.p == ''">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod
+              repudiandae maiores alias autem natus exercitationem itaque ipsum
+              sunt sapiente minus corporis aliquam maxime placeat asperiores
+              aspernatur at recusandae, saepe earum.
+            </p>
+            <p
+              v-if="objProy.id == 1"
+              class="font-weight-black text-center"
+              style="
+                font-size: 0.7rem;
+                max-width: 290px;
+                width: 100%;
+                margin: auto;
+                color: white;
+              "
+            >
+              Por razones de confidencialidad no es posible navegar en la
+              plataforma web libremente
+            </p>
 
             <v-btn
               v-if="objProy.id !== 1"
@@ -73,87 +81,92 @@ export default {
         id: 1,
         img: require("@/assets/img/fondProyect/xentric1.png"),
         titulo: "Analítica CX",
-        p: "",
+        p: "Proyecto enfocado en la creacion de una plataforma web, con el fin de visualizar, apoyar y mejorar el rendimiento de los agentes de ciertos call center. Entre ello usando la libreria ChartJS para mostrar los diversos KPI.",
         url: "",
         iconos: [
           require("@/assets/img/herramientas/flask.png"),
           require("@/assets/img/herramientas/mongoDB.png"),
+          require("@/assets/img/herramientas/html5.png"),
+          require("@/assets/img/herramientas/js.png"),
         ],
       },
       {
         id: 2,
         img: require("@/assets/img/fondProyect/rickandmorty.png"),
         titulo: "Consumo de APIs",
-        p: "",
-        url: "",
-        iconos: ["2", "2"],
+        p: "Plataforma web realizada en base al aprendizaje del consumo de una API externa, esto realizado en el framework de Vue js 2.0, utilizando de Vuex la libreria 'createStore' para agregar los states, mutations y las actions, en el desarrollo del mismo.",
+        url: "https://web-rick-and-morty.netlify.app",
+        iconos: [
+          require("@/assets/img/herramientas/html5.png"),
+          require("@/assets/img/herramientas/js.png"),
+        ],
       },
-      {
-        id: 3,
-        img: require("@/assets/img/fondProyect/rickandmorty.png"),
-        titulo: "Analítica CX",
-        p: "",
-        url: "",
-        iconos: ["3", "2"],
-      },
-      {
-        id: 4,
-        img: require("@/assets/img/fondProyect/rickandmorty.png"),
-        titulo: "Analítica CX",
-        p: "",
-        url: "",
-        iconos: ["4", "2"],
-      },
-      {
-        id: 5,
-        img: require("@/assets/img/fondProyect/rickandmorty.png"),
-        titulo: "Analítica CX",
-        p: "",
-        url: "",
-        iconos: ["5", "2"],
-      },
+      // {
+      //   id: 3,
+      //   img: require("@/assets/img/fondProyect/rickandmorty.png"),
+      //   titulo: "Analítica CX",
+      //   p: "",
+      //   url: "",
+      //   iconos: ["3", "2"],
+      // },
+      // {
+      //   id: 4,
+      //   img: require("@/assets/img/fondProyect/rickandmorty.png"),
+      //   titulo: "Analítica CX",
+      //   p: "",
+      //   url: "",
+      //   iconos: ["4", "2"],
+      // },
+      // {
+      //   id: 5,
+      //   img: require("@/assets/img/fondProyect/rickandmorty.png"),
+      //   titulo: "Analítica CX",
+      //   p: "",
+      //   url: "",
+      //   iconos: ["5", "2"],
+      // },
     ],
   }),
   methods: {
     clickSrc(url) {
       window.location.href = url;
     },
-    icons(titulo) {
-      return this.ObjProy.iconos;
-    },
   },
 };
 </script>
 
 <style>
-.icons {
-  width: 5%;
-}
-.icons:hover {
-  transform: rotate(22deg);
-}
-
-.containerPro {
-  padding-top: 10%;
+.divIcons {
   width: 100%;
   display: grid;
   height: 100%;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   grid-gap: 2rem;
-  margin: 3rem 0;
+  text-align: center;
+  position: absolute;
+  display: flex;
+  justify-self: center;
+}
+.icons {
+  position: relative;
+}
+.icons:hover {
+  transform: scale(1.3);
 }
 
-/* @media (min-width: 1204px) {
-  .containerPro {
-    display: grid;
-    justify-content: center;
-    align-self: center;
-    align-content: center;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    grid-gap: 2rem;
-    margin: 3rem 0;
-  }
-} */
+/* display: grid, y eliminar 'flex-wrap: wrap;
+  justify-content: center;' para mantener el anterior orden  */
+.containerPro {
+  padding-top: 4rem;
+  width: 100%;
+  display: flex;
+  height: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 3fr));
+  grid-gap: 2rem;
+  margin: 1rem 0;
+}
 
 .cardBack {
   position: relative;
@@ -185,17 +198,18 @@ export default {
   font-weight: 400;
   margin-bottom: 120px;
   transition: all 500ms ease-out;
-  margin-top: 30px;
+  margin-top: 15px;
 }
 
-.contenidoText p {
+.descripcion {
   color: white;
   font-size: 15px;
   line-height: 1.5;
   width: 100%;
+  text-align: justify;
   max-width: 290px;
   margin: auto;
-  padding-bottom: 5%;
+  padding-bottom: 0%;
 }
 
 .cardBack:hover > .imgBack {
@@ -221,6 +235,7 @@ export default {
   border-color: #3a087b;
   color: white;
   box-shadow: 10px;
+  /* width: fixed; */
 }
 
 .btnVerMas:hover {
@@ -229,11 +244,25 @@ export default {
   color: #ffffff;
 }
 
-.title {
-  color: aqua;
-  line-height: 1.125;
-  size: 40;
+.tituloView {
+  font-family: sans-serif;
+  color: #141c3a;
+  line-height: 2rem;
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: 0.0125em;
+  bottom: 0;
 }
+
+.parrProy {
+  font-family: "europa", sans-serif;
+  font-weight: 300;
+  line-height: 1.5;
+  font-size: 1rem;
+  color: #141c3a;
+  padding-top: 4vh;
+}
+
 .card {
   /* width: 16vw; */
   width: 100%;

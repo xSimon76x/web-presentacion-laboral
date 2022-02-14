@@ -1,6 +1,11 @@
 <template>
   <div class="contenedor" elevation="0">
-    <v-row no-gutters class="d-flex justify-center">
+    <row class="d-flex justify-center">
+      <v-col>
+        <h1 class="tituloView font-weight-bold text-center">Contacto</h1>
+      </v-col>
+    </row>
+    <v-row class="d-flex justify-center contact">
       <v-col
         cols="12"
         sm="12"
@@ -18,7 +23,7 @@
           <v-toolbar flat color="blue darken-1">
             <v-icon>mdi-account</v-icon>
             <v-toolbar-title class="font-weight-light">
-              Contactenme
+              <!-- Contactenme -->
             </v-toolbar-title>
             <v-spacer></v-spacer>
             <v-btn
@@ -57,7 +62,7 @@
             <v-text-field label="Mensaje" v-model="message"></v-text-field>
           </v-card-text>
           <v-divider></v-divider>
-          <v-card-actions>
+          <v-card-actions class="d-flex align-end" style="height: auto">
             <v-spacer></v-spacer>
             <v-btn :disabled="!isEditing" color="success" @click="enviar()">
               Enviar
@@ -83,7 +88,7 @@
           dark
           elevation="10"
           width="90%"
-          height="68vh"
+          height="48vh"
         >
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26545.60258816497!2d-70.76377280365372!3d-33.72963571445844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9663210c269fb48f%3A0x1b1f7184e32f4c9d!2sBuin%2C%20Regi%C3%B3n%20Metropolitana!5e0!3m2!1ses-419!2scl!4v1644557947568!5m2!1ses-419!2scl"
@@ -179,6 +184,18 @@ export default {
 </script>
 
 <style>
+.contact {
+  padding-top: 4rem;
+}
+.tituloView {
+  font-family: sans-serif;
+  color: #141c3a;
+  line-height: 2rem;
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: 0.0125em;
+  bottom: 0;
+}
 .contenedor {
   padding-top: 6vh;
   padding-bottom: 6vh;

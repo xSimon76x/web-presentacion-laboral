@@ -1,11 +1,16 @@
 <template>
-  <div>
+  <div class="pt-12">
     <!-- tile dark  -->
+    <div class="d-flex justify-center">
+      <h1 class="tituloView font-weight-bold text-center">Sobre Mi</h1>
+    </div>
+
     <v-card class="bg" elevation="0">
       <v-row
         no-gutters
         tile
         lights-out
+        class="pt-4"
         style="flex-wrap: nowrap"
         align="center"
       >
@@ -17,7 +22,7 @@
           <div class="d-flex pa-2 justify-center" outlined tile>
             <v-sheet
               elevation="5"
-              width="600"
+              width="700"
               height="auto"
               class="white"
               rounded
@@ -192,19 +197,11 @@ p {
 }
 
 .bg {
-  padding-top: 6vh;
+  padding-top: 4vh;
   padding-bottom: 6vh;
   border-color: white;
 }
 .divPa {
   position: relative;
-}
-.titulo {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  height: 30%;
-  width: 50%;
-  margin: -15% 0 0 -25%;
 }
 </style>

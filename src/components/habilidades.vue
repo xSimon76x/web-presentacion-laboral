@@ -1,7 +1,9 @@
 <template>
   <div class="divContainer" elevation="0">
     <div class="d-flex justify-center mb-6">
-      <h1 class="pa-2" outlined tile height="100">Conocimientos</h1>
+      <h1 class="tituloView font-weight-bold text-center pa-2">
+        Conocimientos
+      </h1>
     </div>
 
     <div>
