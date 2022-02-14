@@ -8,31 +8,23 @@
 
     <div>
       <v-container>
-        <v-row justify="space-around">
-          <v-col
+        <div class="vCont">
+          <v-sheet
+            :elevation="4"
+            class=""
+            height="100"
+            width="100"
+            style="position: relative"
             v-for="herramienta in herramientas"
             :key="herramienta.alt"
-            cols="auto"
-            md="auto"
           >
-            <v-sheet
-              :elevation="4"
-              class="mx-auto d-flex justify-center align-center"
-              height="100"
-              width="100"
-              style="position: relative"
-            >
-              <v-img
-                fixed
-                class="img"
-                :src="herramienta.url"
-                :alt="herramienta.alt"
-                :max-width="herramienta.wd"
-                :max-height="herramienta.hg"
-              ></v-img>
-            </v-sheet>
-          </v-col>
-        </v-row>
+            <v-img
+              class="img"
+              :src="herramienta.url"
+              :alt="herramienta.alt"
+            ></v-img>
+          </v-sheet>
+        </div>
       </v-container>
     </div>
   </div>
@@ -83,7 +75,7 @@ export default {
         url: require("@/assets/img/logo/vuetify2.0.png"),
         alt: "vuetify",
         wd: "auto",
-        hg: "100%",
+        hg: "auto",
       },
     ],
   }),
@@ -91,8 +83,25 @@ export default {
 </script>
 
 <style>
+.vCont {
+  padding-top: 4rem;
+  width: 100%;
+  display: flex;
+  height: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-gap: 2rem;
+  margin: 1rem 0;
+}
 .img {
   position: relative;
+  align-self: center;
+  align-items: center;
+  padding-top: 50%;
+  padding-bottom: 50%;
+  max-height: 100%;
+  max-width: 100%;
 }
 .divContainer {
   padding-top: 6vh;

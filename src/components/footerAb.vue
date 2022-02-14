@@ -1,7 +1,7 @@
 <template>
   <div>
-    <v-footer v-bind="localAttrs" dark :padless="true">
-      <v-card flat tile width="100%" class="text-center deep-purple darken-4">
+    <v-footer v-bind="localAttrs" :padless="true">
+      <v-card flat tile width="100%" class="text-center">
         <!-- <v-card-text class="blue lighten-1 text-center py-0">
           <v-btn
             @click="red(link.url)"
@@ -22,7 +22,7 @@
           </v-btn>
         </v-card-text> -->
         <v-divider></v-divider>
-        <v-card-text class="py-2 white--text text-center textFooter">
+        <v-card-text class="py-2 black--text text-center textFooter Sfooter">
           Todos los derechos reservados por
           <strong> Simon Ivan Bustamante Venegas</strong> ©2022
         </v-card-text>
@@ -84,7 +84,11 @@ export default {
 </script>
 
 <style>
+.Sfooter {
+  background-color: #2d6cdf;
+}
 .textFooter {
+  color: black;
   font-size: 10px;
 }
 </style>

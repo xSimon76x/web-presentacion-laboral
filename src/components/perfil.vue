@@ -66,16 +66,15 @@
                   </h4>
                 </v-col>
                 <v-col class="d-flex flex-column" style="margin: 0">
-                  <p class="text-center">
-                    Hola! soy un profesional que acaba de egresar en ingeniería
-                    en informatica, cuento con experiencia básica en el
-                    desarrollo web en Python - Flask, gracias a la experiencia
-                    que obtuve durante mi practica profesional con el Citt, mi
-                    principal objetivo es formar parte de una empresa en la cual
-                    pueda desarrollarme y crecer en el área profesional y
+                  <p class="parrProy text-justify">
+                    Desde que finalice con mi carrera en ingeniería en
+                    informatica, mi principal objetivo está en la búsqueda de
+                    una empresa pequeña o mediana, para poder desarrollarme y
+                    crecer en el área profesional (como desarrollador) y
                     personal, manteniendo mi motivación por aprender cualquier
-                    tecnología y metodología, que requiera la empresa para optar
-                    por la oportunidad de trabajar con ellos.
+                    tecnología y metodología que requiera la compañía, con el
+                    fin de poder optar por la oportunidad de trabajar en dicha
+                    empresa.
                   </p>
                   <div class="d-flex justify-center">
                     <v-btn
@@ -87,7 +86,7 @@
                       icon
                       color=" blue"
                     >
-                      <v-tooltip top>
+                      <v-tooltip top v-if="link.name !== 'Curriculum'">
                         <template v-slot:activator="{ on, attrs }">
                           <v-icon class="icons" v-bind="attrs" v-on="on">
                             {{ link.icons }}
@@ -119,6 +118,9 @@
 
 <script>
 export default {
+  components: {
+    pdf,
+  },
   data: () => ({
     icons: ["mdi-linkedin", "mdi-email", "mdi-git", "mdi-phone"],
     items: ["default", "absolute", "fixed"],
@@ -146,6 +148,11 @@ export default {
         url: "https://wa.me/+56964621648",
         name: "Telefono",
       },
+      {
+        icons: "mdi-file-document",
+        url: "../assets/document/SimonBustamanteVenegas_CV Ultimo.pdf",
+        name: "Curriculum",
+      },
     ],
   }),
   computed: {
@@ -164,6 +171,17 @@ export default {
   methods: {
     red(link) {
       window.location.href = link;
+    },
+    download(filename, textInput) {
+      let element = document.createElement("a");
+      element.setAttribute(
+        "href",
+        "data:text/plain;charset=utf-8, " + encodeURIComponent(textInput)
+      );
+      element.setAttribute("download", filename);
+      document.body.appendChild(element);
+      element.click();
+      //document.body.removeChild(element);
     },
   },
 };

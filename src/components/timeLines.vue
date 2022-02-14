@@ -10,7 +10,12 @@
           xs="12"
           class="d-flex justify-center pb-2 pt-8"
         >
-          <h1 class="tituloView font-weight-bold text-center">Mi Historia</h1>
+          <h1
+            class="tituloView font-weight-bold text-center"
+            style="color: #ffffff"
+          >
+            Mi Historia
+          </h1>
         </v-col>
       </v-row>
       <v-row justify="space-around">

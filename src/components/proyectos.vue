@@ -173,7 +173,7 @@ export default {
   height: 300px;
   width: 420px;
   overflow: hidden;
-  box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 25px 45px rgba(0, 0, 0, 0.5);
   cursor: pointer;
 }
 
@@ -261,6 +261,7 @@ export default {
   font-size: 1rem;
   color: #141c3a;
   padding-top: 4vh;
+  letter-spacing: 0.0125em;
 }
 
 .card {

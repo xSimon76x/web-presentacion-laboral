@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="custom-shape-divider-top-1644551658">
+    <!-- <div class="custom-shape-divider-top-1644551658">
       <svg
         data-name="Layer 1"
         xmlns="http://www.w3.org/2000/svg"
@@ -12,34 +12,9 @@
           class="shape-fill"
         ></path>
       </svg>
-    </div>
+    </div> -->
     <div class="back">
       <timLine />
-    </div>
-    <div class="custom-shape-divider-bottom-1644555398">
-      <svg
-        data-name="Layer 2"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 1200 120"
-        preserveAspectRatio="none"
-      >
-        <defs>
-          <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop
-              offset="0%"
-              style="stop-color: rgba(0, 172, 193, 1); stop-opacity: 1"
-            />
-            <stop
-              offset="90%"
-              style="stop-color: rgba(84, 58, 183, 1); stop-opacity: 10"
-            />
-          </linearGradient>
-        </defs>
-        <path
-          d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
-          class="shape-fillBottom"
-        ></path>
-      </svg>
     </div>
   </div>
 </template>
@@ -55,12 +30,13 @@ export default {
 
 <style>
 .back {
-  padding-top: 5%;
-  background: linear-gradient(
+  /* padding-top: 5%; */
+  /* background: linear-gradient(
     60deg,
     rgba(84, 58, 183, 1) 0%,
     rgba(0, 172, 193, 1) 100%
-  );
+  ); */
+  background: #2d6cdf;
 }
 
 /* start shape top */

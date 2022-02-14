@@ -165,6 +165,7 @@ export default {
 }
 .annosLineTime {
   font-size: 3vh;
+  color: white;
 }
 .titulosCard {
   font-size: 3vh;
