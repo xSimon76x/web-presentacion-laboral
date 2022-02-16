@@ -108,7 +108,7 @@
 </template>
 
 <script>
-import { jsPDF } from "jspdf";
+// import { jsPDF } from "jspdf";
 
 export default {
   components: {},
@@ -164,27 +164,27 @@ export default {
     red(link) {
       window.location.href = link;
     },
-    download() {
-      let FileSaver = require("file-saver");
-      let oReq = new XMLHttpRequest();
-      // El endpoint del servidor
-      let URLToPDF =
-        "https://mozilla.github.io/pdf.js/web/compressed.tracemonkey-pldi-09.pdf";
-      // Configurar el XMLHttpRequest
-      oReq.open("GET", URLToPDF, true);
-      // Se debe utilizar el tipo de respuesta de blob
-      oReq.responseType = "blob";
-      // Finaliza la solicitud del archivo
-      oReq.onload = function () {
-        // Una vez se descarga el archivo, se puede abrir en otra ventana
-        let file = new Blob([oReq.response], {
-          type: "application/pdf",
-        });
-        // la descarga se estara generando directamente en el navegador
-        FileSaver.saveAs(file, "SimonBustamante_CV.pdf");
-      };
-      oReq.send();
-    },
+    // download() {
+    //   let FileSaver = require("file-saver");
+    //   let oReq = new XMLHttpRequest();
+    //   // El endpoint del servidor
+    //   let URLToPDF =
+    //     "https://mozilla.github.io/pdf.js/web/compressed.tracemonkey-pldi-09.pdf";
+    //   // Configurar el XMLHttpRequest
+    //   oReq.open("GET", URLToPDF, true);
+    //   // Se debe utilizar el tipo de respuesta de blob
+    //   oReq.responseType = "blob";
+    //   // Finaliza la solicitud del archivo
+    //   oReq.onload = function () {
+    //     // Una vez se descarga el archivo, se puede abrir en otra ventana
+    //     let file = new Blob([oReq.response], {
+    //       type: "application/pdf",
+    //     });
+    //     // la descarga se estara generando directamente en el navegador
+    //     FileSaver.saveAs(file, "SimonBustamante_CV.pdf");
+    //   };
+    //   oReq.send();
+    // },
   },
 };
 </script>
