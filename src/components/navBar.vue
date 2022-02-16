@@ -72,9 +72,7 @@
         <div>
           <v-list-item>
             <v-list-item-avatar>
-              <v-img
-                src="https://randomuser.me/api/portraits/men/78.jpg"
-              ></v-img>
+              <v-img src="../assets/img/logo/imgPerfil.png"></v-img>
             </v-list-item-avatar>
 
             <v-list-item-content>

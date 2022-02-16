@@ -77,7 +77,6 @@
                     empresa.
                   </p>
                   <div class="d-flex justify-center">
-                    <v-icon @click="download()"> mdi-file-document </v-icon>
                     <v-btn
                       @click="red(link.url)"
                       v-for="link in links"
@@ -101,16 +100,6 @@
                 </v-col>
               </v-row>
             </v-sheet>
-            <!-- <p>
-              Hola! soy un profesional que acaba de egresar en ingeniería en
-              informatica, cuento con experiencia básica en el desarrollo web en
-              Python - Flask, gracias a la experiencia que obtuve durante mi
-              practica profesional con el Citt, mi principal objetivo es formar
-              parte de una empresa en la cual pueda desarrollarme y crecer en el
-              área profesional y personal, manteniendo mi motivación por
-              aprender cualquier tecnología y metodología, que requiera la
-              empresa para optar por la oportunidad de trabajar con ellos.
-            </p> -->
           </div>
         </v-col>
       </v-row>
@@ -178,22 +167,20 @@ export default {
     download() {
       let FileSaver = require("file-saver");
       let oReq = new XMLHttpRequest();
-      // The Endpoint of your server
+      // El endpoint del servidor
       let URLToPDF =
         "https://mozilla.github.io/pdf.js/web/compressed.tracemonkey-pldi-09.pdf";
-      // Configure XMLHttpRequest
+      // Configurar el XMLHttpRequest
       oReq.open("GET", URLToPDF, true);
-      // Important to use the blob response type
+      // Se debe utilizar el tipo de respuesta de blob
       oReq.responseType = "blob";
-      // When the file request finishes
-      // Is up to you, the configuration for error events etc.
+      // Finaliza la solicitud del archivo
       oReq.onload = function () {
-        // Once the file is downloaded, open a new window with the PDF
-        // Remember to allow the POP-UPS in your browser
+        // Una vez se descarga el archivo, se puede abrir en otra ventana
         let file = new Blob([oReq.response], {
           type: "application/pdf",
         });
-        // Generate file download directly in the browser !
+        // la descarga se estara generando directamente en el navegador
         FileSaver.saveAs(file, "SimonBustamante_CV.pdf");
       };
       oReq.send();

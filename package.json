@@ -8,11 +8,11 @@
   },
   "dependencies": {
     "@emailjs/browser": "^3.4.0",
+    "@pdftron/webviewer": "^8.3.0",
     "axios": "^0.25.0",
     "core-js": "^3.6.5",
     "file-saver": "^2.0.5",
     "jspdf": "^2.5.1",
-    "pdfjs-dist": "^2.12.313",
     "register-service-worker": "^1.7.1",
     "vue": "^2.6.11",
     "vue-axios": "^3.4.0",

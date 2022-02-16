@@ -2,7 +2,17 @@ module.exports = {
   transpileDependencies: [
     'vuetify'
   ],
-  devServer: {
-    proxy: 'https://www.mediafire.com/file/o8539rucnsysy8y/',
-}
+  // configureWebpack: {
+  //   devServer: {
+  //     headers: { "Access-Control-Allow-Origin": "*" }
+  //   }
+  // }
+//   module:{
+//     rules:[{
+//         loader: 'babel-loader',
+//         test: /\.js|\.jsx$/,
+//         exclude: /node_modules/
+//     }]
+// },
+
 }

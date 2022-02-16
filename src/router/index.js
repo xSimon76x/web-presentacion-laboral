@@ -24,6 +24,10 @@ const routes = [
     path: '/proyectos',
     name: 'proyectos',
     component: () => import('../views/Proyects.vue')
+  },{
+    path: '/curriculum',
+    name: 'curriculum',
+    component: () => import('../views/ViewPDF.vue')
   },
   
 

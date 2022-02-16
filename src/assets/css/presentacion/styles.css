@@ -4,6 +4,46 @@ body {
   margin: 0;
 }
 
+.imgPres {
+  width: 20vw;
+  margin: 2rem 0;
+}
+
+.tituloPres {
+  font-size: 3rem;
+  font-family: sans-serif;
+  font-weight: 500;
+  line-height: 1.125;
+}
+@media screen and (min-width: 1024px) {
+  .tituloPres {
+    font-size: 3rem;
+    font-family: sans-serif;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  tituloPres {
+    font-size: 2.5rem;
+    font-family: sans-serif;
+  }
+}
+
+.subtitulo {
+  font-family: sans-serif;
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+.container-pre {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
 .wd {
   src: url("../../img/extras/wd1.svg");
 }
