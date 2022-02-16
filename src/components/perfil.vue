@@ -77,6 +77,7 @@
                     empresa.
                   </p>
                   <div class="d-flex justify-center">
+                    <v-icon @click="download()"> mdi-file-document </v-icon>
                     <v-btn
                       @click="red(link.url)"
                       v-for="link in links"
@@ -86,6 +87,7 @@
                       icon
                       color=" blue"
                     >
+                      <!-- v-if="link.name !== 'Curriculum'" -->
                       <v-tooltip top v-if="link.name !== 'Curriculum'">
                         <template v-slot:activator="{ on, attrs }">
                           <v-icon class="icons" v-bind="attrs" v-on="on">
@@ -117,10 +119,11 @@
 </template>
 
 <script>
+import { jsPDF } from "jspdf";
+
 export default {
-  components: {
-    pdf,
-  },
+  components: {},
+
   data: () => ({
     icons: ["mdi-linkedin", "mdi-email", "mdi-git", "mdi-phone"],
     items: ["default", "absolute", "fixed"],
@@ -150,7 +153,7 @@ export default {
       },
       {
         icons: "mdi-file-document",
-        url: "../assets/document/SimonBustamanteVenegas_CV Ultimo.pdf",
+        url: "/assets/document/SimonBustamanteVenegas_CV_Ultimo.pdf",
         name: "Curriculum",
       },
     ],
@@ -172,16 +175,28 @@ export default {
     red(link) {
       window.location.href = link;
     },
-    download(filename, textInput) {
-      let element = document.createElement("a");
-      element.setAttribute(
-        "href",
-        "data:text/plain;charset=utf-8, " + encodeURIComponent(textInput)
-      );
-      element.setAttribute("download", filename);
-      document.body.appendChild(element);
-      element.click();
-      //document.body.removeChild(element);
+    download() {
+      let FileSaver = require("file-saver");
+      let oReq = new XMLHttpRequest();
+      // The Endpoint of your server
+      let URLToPDF =
+        "https://mozilla.github.io/pdf.js/web/compressed.tracemonkey-pldi-09.pdf";
+      // Configure XMLHttpRequest
+      oReq.open("GET", URLToPDF, true);
+      // Important to use the blob response type
+      oReq.responseType = "blob";
+      // When the file request finishes
+      // Is up to you, the configuration for error events etc.
+      oReq.onload = function () {
+        // Once the file is downloaded, open a new window with the PDF
+        // Remember to allow the POP-UPS in your browser
+        let file = new Blob([oReq.response], {
+          type: "application/pdf",
+        });
+        // Generate file download directly in the browser !
+        FileSaver.saveAs(file, "SimonBustamante_CV.pdf");
+      };
+      oReq.send();
     },
   },
 };

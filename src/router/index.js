@@ -24,7 +24,9 @@ const routes = [
     path: '/proyectos',
     name: 'proyectos',
     component: () => import('../views/Proyects.vue')
-  }
+  },
+  
+
 ]
 
 const router = new VueRouter({
