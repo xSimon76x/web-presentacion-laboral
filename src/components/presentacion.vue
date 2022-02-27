@@ -3,8 +3,8 @@
     <div class="header">
       <div class="inner-header container-pre">
         <div class="flex-column">
-          <h1 class="tituloPres" style="">Desarrollador Junior</h1>
-          <h2 class="subtitulo text-sm-body-2">
+          <h1 class="text-xl-h4" style="">Desarrollador Junior</h1>
+          <h2 class="text-caption">
             Enfocado en algunos proyectos y aplicaciones web
           </h2>
           <v-icon large color="white" class="pr-2 imgPres">

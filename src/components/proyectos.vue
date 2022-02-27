@@ -2,7 +2,7 @@
   <v-container>
     <div class="d-flex flex-column pb-12 pt-12">
       <div class="d-flex flex-column">
-        <h1 class="tituloView font-weight-bold text-center">Mis Proyectos</h1>
+        <h1 class="tituloView font-weight-bold text-center">Proyectos</h1>
         <p class="parrProy text-center">
           Aqui se veran algunos de los proyectos, en donde por un lado he
           desarrollado, y otros de los cuales he participado.
@@ -81,7 +81,7 @@ export default {
         id: 1,
         img: require("@/assets/img/fondProyect/xentric1.png"),
         titulo: "Analítica CX",
-        p: "Proyecto enfocado en la creacion de una plataforma web, con el fin de visualizar, apoyar y mejorar el rendimiento de los agentes de ciertos call center. Entre ello usando la libreria ChartJS para mostrar los diversos KPI, y utilizando herramientas como python, flask, Html5, js y css.",
+        p: "Participación en el proyecto enfocado en la creacion de una plataforma web, con el fin de visualizar, apoyar y mejorar el rendimiento de los agentes de ciertos call center. Entre ello usando la libreria ChartJS para mostrar los diversos KPI, y utilizando herramientas como python, flask, Html5, js y css.",
         url: "",
         iconos: [
           require("@/assets/img/herramientas/flask.png"),
