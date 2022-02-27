@@ -12,7 +12,7 @@
         >
           <h1
             class="tituloView font-weight-bold text-center"
-            style="color: #ffffff"
+            style="color: #141c3a"
           >
             Mi Historia
           </h1>

@@ -81,7 +81,7 @@ export default {
         id: 1,
         img: require("@/assets/img/fondProyect/xentric1.png"),
         titulo: "Analítica CX",
-        p: "Proyecto enfocado en la creacion de una plataforma web, con el fin de visualizar, apoyar y mejorar el rendimiento de los agentes de ciertos call center. Entre ello usando la libreria ChartJS para mostrar los diversos KPI.",
+        p: "Proyecto enfocado en la creacion de una plataforma web, con el fin de visualizar, apoyar y mejorar el rendimiento de los agentes de ciertos call center. Entre ello usando la libreria ChartJS para mostrar los diversos KPI, y utilizando herramientas como python, flask, Html5, js y css.",
         url: "",
         iconos: [
           require("@/assets/img/herramientas/flask.png"),
@@ -101,16 +101,22 @@ export default {
           require("@/assets/img/herramientas/js.png"),
         ],
       },
-      // {
-      //   id: 3,
-      //   img: require("@/assets/img/fondProyect/rickandmorty.png"),
-      //   titulo: "Analítica CX",
-      //   p: "",
-      //   url: "",
-      //   iconos: ["3", "2"],
-      // },
+      {
+        id: 3,
+        img: require("@/assets/img/fondProyect/JuegoBasico.png"),
+        titulo: "Juego basico con JS",
+        p: "Un juego realizado en el framework de Phaser, el cual su desarrollo esta basado en HTML5 y Javascript. Para esto, estuve siguiendo un curso en udemy, el cual me ayudo a aprender y realizar este proyecto. Para comenzar a probarlo, puede visitar el sitio.",
+        url: "https://atlantisjs.netlify.app",
+      },
       // {
       //   id: 4,
+      //   img: require("@/assets/img/fondProyect/web-clima.png"),
+      //   titulo: "Web del clima",
+      //   p: "Un desarrollo en base a un mock up que entrego la web de devchallenges.io, junto con la api de 'metaweather' que se uso. Dicha aplicacion web, esta desarrollada en React js, en donde estuve aprendiendo sobre Hooks, props, router dom, entre otros vistos en un curso en udemy.",
+      //   url: "",
+      // },
+      // {
+      //   id: 5,
       //   img: require("@/assets/img/fondProyect/rickandmorty.png"),
       //   titulo: "Analítica CX",
       //   p: "",
@@ -163,7 +169,7 @@ export default {
   height: 100%;
   flex-wrap: wrap;
   justify-content: center;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 3fr));
+  grid-template-columns: repeat(auto-fill, minmax(350px, 2fr));
   grid-gap: 2rem;
   margin: 1rem 0;
 }
@@ -207,7 +213,7 @@ export default {
   line-height: 1.5;
   width: 100%;
   text-align: justify;
-  max-width: 290px;
+  max-width: 330px;
   margin: auto;
   padding-bottom: 0%;
 }

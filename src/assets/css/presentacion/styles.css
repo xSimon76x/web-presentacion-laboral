@@ -6,11 +6,11 @@ body {
 
 .imgPres {
   width: 20vw;
-  margin: 2rem 0;
+  margin: 1rem 0;
 }
 
 .tituloPres {
-  font-size: 3rem;
+  font-size: 72px !important;
   font-family: sans-serif;
   font-weight: 500;
   line-height: 1.125;

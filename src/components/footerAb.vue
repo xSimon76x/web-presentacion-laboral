@@ -22,7 +22,7 @@
           </v-btn>
         </v-card-text> -->
         <v-divider></v-divider>
-        <v-card-text class="py-2 black--text text-center textFooter Sfooter">
+        <v-card-text class="py-2 white--text text-center textFooter Sfooter">
           Todos los derechos reservados por
           <strong> Simon Ivan Bustamante Venegas</strong> ©2022
         </v-card-text>
@@ -85,10 +85,10 @@ export default {
 
 <style>
 .Sfooter {
-  background-color: #2d6cdf;
+  background-color: #2b2b2b;
 }
 .textFooter {
-  color: black;
+  color: rgb(255, 255, 255);
   font-size: 10px;
 }
 </style>

@@ -89,7 +89,7 @@ export default {
         imgExt: require("@/assets/img/fondos/citt-duoc-uc2.png"),
         desc: "Participación en el proyecto *Analítica CX* entre el Citt de Duoc UC y la empresa Xentric SA...",
         descExtendida:
-          "Participación en el proyecto *Analítica CX* entre el Citt de Duoc UC y la empresa Xentric SA. Estuve enfocado en liderar a un equipo que se centró en la creación de  la  plataforma  web  para  la  empresa Xentric,  trabajando  con  tecnologías  como  con Flask (Python), MongoDB, HTML, JQuery (JS), Css y Git Hub. Así bien, esta fue una oportunidad para poder convalidar mi practica profesional, y mi portafolio de titulo, que por motivos de confidencialidad, no puedo adjuntar dicho repositorio. ",
+          "Participación en el proyecto *Analítica CX* entre el Citt de Duoc UC y la empresa Xentric SA. Estuve enfocado en liderar a un equipo que se centró en la creación de  la  plataforma  web  para  la  empresa Xentric,  trabajando  con  tecnologías  como  con Flask (Python), MongoDB, HTML, JQuery (JS), Css y Git Hub. Así bien, esta fue una oportunidad para poder convalidar mi practica profesional, y mi portafolio de titulo, que por motivos de confidencialidad, no puedo adjuntar dicho repositorio. Sin embargo, tengo ciertas referencias en mi Curriculum que pueden validar lo realizado. ",
         fecha: "Jun 2021 - Nov 2021 ",
         urlLinkedin:
           "https://www.linkedin.com/posts/simon-bustamante-venegas_quiero-compartir-el-orgullo-que-me-hace-sentir-activity-6877388888483090432-cy07",
@@ -165,7 +165,7 @@ export default {
 }
 .annosLineTime {
   font-size: 3vh;
-  color: white;
+  color: #141c3a;
 }
 .titulosCard {
   font-size: 3vh;

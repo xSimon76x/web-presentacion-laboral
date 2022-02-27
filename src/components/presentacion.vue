@@ -4,8 +4,8 @@
       <div class="inner-header container-pre">
         <div class="flex-column">
           <h1 class="tituloPres" style="">Desarrollador Junior</h1>
-          <h2 class="subtitulo">
-            Comienzo en este mundo realizando proyectos pequeños, y me encanta
+          <h2 class="subtitulo text-sm-body-2">
+            Enfocado en algunos proyectos y aplicaciones web
           </h2>
           <v-icon large color="white" class="pr-2 imgPres">
             mdi-monitor

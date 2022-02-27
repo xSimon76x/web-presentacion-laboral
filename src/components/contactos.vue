@@ -13,6 +13,7 @@
         xs="12"
         lg="8"
         class="d-flex justify-center mb-6"
+        style="padding-left: 3vw"
       >
         <v-card
           class="overflow-hidden card"
@@ -40,14 +41,14 @@
             <v-text-field
               :disabled="!isEditing"
               color="white"
-              label="Ingresa su correo"
+              label="Ingrese su correo"
               type="email"
               v-model="from_email"
             ></v-text-field>
             <v-text-field
               :disabled="!isEditing"
               color="white"
-              label="Ingresa su nombre"
+              label="Ingrese su nombre"
               type="text"
               v-model="from_name"
             ></v-text-field>
@@ -56,7 +57,7 @@
               :items="states"
               color="white"
               item-text="name"
-              label="Ingresa un tema"
+              label="Ingrese un tema"
               v-model="subject"
             ></v-text-field>
             <v-text-field label="Mensaje" v-model="message"></v-text-field>
@@ -88,7 +89,7 @@
           dark
           elevation="10"
           width="90%"
-          height="48vh"
+          height="auto"
         >
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26545.60258816497!2d-70.76377280365372!3d-33.72963571445844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9663210c269fb48f%3A0x1b1f7184e32f4c9d!2sBuin%2C%20Regi%C3%B3n%20Metropolitana!5e0!3m2!1ses-419!2scl!4v1644557947568!5m2!1ses-419!2scl"

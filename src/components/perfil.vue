@@ -62,7 +62,7 @@
                     class="font-weight-bold mb-5 text-center align-center"
                     style="color: #0f446e; font-size: 80%"
                   >
-                    Desarrollador Junior
+                    sim.bustamante@duocuc.cl
                   </h4>
                 </v-col>
                 <v-col class="d-flex flex-column" style="margin: 0">
@@ -125,11 +125,11 @@ export default {
         url: "https://www.linkedin.com/in/simon-bustamante-venegas",
         name: "Linkedin",
       },
-      {
-        icons: "mdi-email",
-        url: "https://www.google.com/gmail/about/",
-        name: "Email",
-      },
+      // {
+      //   icons: "mdi-email",
+      //   url: " ",
+      //   name: "sim.bustamante@duocuc.cl",
+      // },
       {
         icons: "mdi-git",
         url: "https://github.com/xSimon76x",
@@ -140,11 +140,11 @@ export default {
         url: "https://wa.me/+56964621648",
         name: "Telefono",
       },
-      {
-        icons: "mdi-file-document",
-        url: "/assets/document/SimonBustamanteVenegas_CV_Ultimo.pdf",
-        name: "Curriculum",
-      },
+      // {
+      //   icons: "mdi-file-document",
+      //   url: "/assets/document/SimonBustamanteVenegas_CV_Ultimo.pdf",
+      //   name: "Curriculum",
+      // },
     ],
   }),
   computed: {
@@ -164,27 +164,6 @@ export default {
     red(link) {
       window.location.href = link;
     },
-    // download() {
-    //   let FileSaver = require("file-saver");
-    //   let oReq = new XMLHttpRequest();
-    //   // El endpoint del servidor
-    //   let URLToPDF =
-    //     "https://mozilla.github.io/pdf.js/web/compressed.tracemonkey-pldi-09.pdf";
-    //   // Configurar el XMLHttpRequest
-    //   oReq.open("GET", URLToPDF, true);
-    //   // Se debe utilizar el tipo de respuesta de blob
-    //   oReq.responseType = "blob";
-    //   // Finaliza la solicitud del archivo
-    //   oReq.onload = function () {
-    //     // Una vez se descarga el archivo, se puede abrir en otra ventana
-    //     let file = new Blob([oReq.response], {
-    //       type: "application/pdf",
-    //     });
-    //     // la descarga se estara generando directamente en el navegador
-    //     FileSaver.saveAs(file, "SimonBustamante_CV.pdf");
-    //   };
-    //   oReq.send();
-    // },
   },
 };
 </script>
