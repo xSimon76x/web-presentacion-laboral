@@ -93,8 +93,8 @@ export default {
       {
         id: 2,
         img: require("@/assets/img/fondProyect/rickandmorty.png"),
-        titulo: "Consumo de APIs",
-        p: "Plataforma web realizada en base al aprendizaje del consumo de una API externa, esto realizado en el framework de Vue js 2.0, utilizando de Vuex la libreria 'createStore' para agregar los states, mutations y las actions, en el desarrollo del mismo.",
+        titulo: "Aplicación de 'Rick and Morty'",
+        p: "Plataforma web realizada en base al aprendizaje del consumo de una API externa (The Rick and Morty API), esto realizado en el framework de Vue js 2.0, utilizando de Vuex la libreria 'createStore' para agregar los states, mutations y las actions, en el desarrollo del mismo.",
         url: "https://web-rick-and-morty.netlify.app",
         iconos: [
           require("@/assets/img/herramientas/html5.png"),
@@ -107,6 +107,13 @@ export default {
         titulo: "Juego basico con JS",
         p: "Un juego realizado en el framework de Phaser, el cual su desarrollo esta basado en HTML5 y Javascript. Para esto, estuve siguiendo un curso en udemy, el cual me ayudo a aprender y realizar este proyecto. Para comenzar a probarlo, puede visitar el sitio.",
         url: "https://atlantisjs.netlify.app",
+      },
+      {
+        id: 4,
+        img: require("@/assets/img/fondProyect/pokemon.png"),
+        titulo: "Aplicación de Pokemon",
+        p: "Una aplicación web que busca visualizar una lista de Pokémon, para generar una cierta cantidad de funciones respecto a esto, que desembocarían en ver su detalle al cliquear en su tarjeta. Dicho desarrollo se basó en la Api llamada “PokeAPI”, que fue consumida en el ambiente de React JS.",
+        url: "https://app-web-pokemon.netlify.app",
       },
       // {
       //   id: 4,
