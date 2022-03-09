@@ -77,6 +77,18 @@ export default {
         wd: "auto",
         hg: "auto",
       },
+      {
+        url: require("@/assets/img/herramientas/reactJS.png"),
+        alt: "react",
+        wd: "auto",
+        hg: "auto",
+      },
+      {
+        url: require("@/assets/img/herramientas/bulmaCss.png"),
+        alt: "bulmaCss",
+        wd: "auto",
+        hg: "auto",
+      },
     ],
   }),
 };
