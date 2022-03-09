@@ -135,7 +135,7 @@ export default {
         id: 4,
         img: require("@/assets/img/fondProyect/web-clima.png"),
         titulo: "Web del clima",
-        p: "Un desarrollo en base a un mock up que entrego la web de devchallenges.io, junto con la api de 'metaweather' que se uso. Dicha aplicacion web, esta desarrollada en React JS, en donde estuve aprendiendo sobre Hooks, props, router dom, entre otros vistos en un curso en udemy.",
+        p: "Un desarrollo en base a un mock up que entrego la web de devchallenges.io, junto con la api de 'metaweather' que se uso. Dicha aplicacion web, esta desarrollada en React JS, en donde estuve aprendiendo sobre Hooks, props, router dom, entre otros vistos en un curso en udemy. Solo ejecución local.",
         url: "https://github.com/xSimon76x/app-clima-localizacion.git",
       },
       // {
