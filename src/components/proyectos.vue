@@ -55,7 +55,7 @@
             </p>
 
             <v-btn
-              v-if="objProy.id !== 1"
+              v-if="objProy.id !== 1 && objProy.titulo !== 'Web del clima'"
               class="btnVerMas"
               depressed
               outlined
@@ -64,6 +64,22 @@
               @click="clickSrc(objProy.url)"
               >Visitar sitio</v-btn
             >
+            <v-btn
+              v-if="objProy.titulo == 'Web del clima'"
+              @click="clickSrc(objProy.url)"
+              dark
+              icon
+              color="blue"
+            >
+              <v-tooltip right>
+                <template v-slot:activator="{ on, attrs }">
+                  <v-icon class="icons" v-bind="attrs" v-on="on">
+                    mdi-git
+                  </v-icon>
+                </template>
+                <span style="font-size: 1.8vh">Repositorio local</span>
+              </v-tooltip>
+            </v-btn>
           </div>
         </v-card>
         <!-- </v-col>
@@ -108,20 +124,20 @@ export default {
         p: "Un juego realizado en el framework de Phaser, el cual su desarrollo esta basado en HTML5 y Javascript. Para esto, estuve siguiendo un curso en udemy, el cual me ayudo a aprender y realizar este proyecto. Para comenzar a probarlo, puede visitar el sitio.",
         url: "https://atlantisjs.netlify.app",
       },
-      {
-        id: 4,
-        img: require("@/assets/img/fondProyect/pokemon.png"),
-        titulo: "Aplicación de Pokemon",
-        p: "Una aplicación web que busca visualizar una lista de Pokémon, para generar una cierta cantidad de funciones respecto a esto, que desembocarían en ver su detalle al cliquear en su tarjeta. Dicho desarrollo se basó en la Api llamada “PokeAPI”, que fue consumida en el ambiente de React JS.",
-        url: "https://app-web-pokemon.netlify.app",
-      },
       // {
       //   id: 4,
-      //   img: require("@/assets/img/fondProyect/web-clima.png"),
-      //   titulo: "Web del clima",
-      //   p: "Un desarrollo en base a un mock up que entrego la web de devchallenges.io, junto con la api de 'metaweather' que se uso. Dicha aplicacion web, esta desarrollada en React js, en donde estuve aprendiendo sobre Hooks, props, router dom, entre otros vistos en un curso en udemy.",
-      //   url: "",
+      //   img: require("@/assets/img/fondProyect/pokemon.png"),
+      //   titulo: "Aplicación de Pokemon",
+      //   p: "Una aplicación web que busca visualizar una lista de Pokémon, para generar una cierta cantidad de funciones respecto a esto, que desembocarían en ver su detalle al cliquear en su tarjeta. Dicho desarrollo se basó en la Api llamada “PokeAPI”, que fue consumida en el ambiente de React JS.",
+      //   url: "https://app-web-pokemon.netlify.app",
       // },
+      {
+        id: 4,
+        img: require("@/assets/img/fondProyect/web-clima.png"),
+        titulo: "Web del clima",
+        p: "Un desarrollo en base a un mock up que entrego la web de devchallenges.io, junto con la api de 'metaweather' que se uso. Dicha aplicacion web, esta desarrollada en React JS, en donde estuve aprendiendo sobre Hooks, props, router dom, entre otros vistos en un curso en udemy.",
+        url: "https://github.com/xSimon76x/app-clima-localizacion.git",
+      },
       // {
       //   id: 5,
       //   img: require("@/assets/img/fondProyect/rickandmorty.png"),
