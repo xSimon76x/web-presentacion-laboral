@@ -8,17 +8,8 @@
           desarrollado, y otros de los cuales he participado.
         </p>
       </div>
+
       <div class="containerPro">
-        <!-- <v-row class="row">
-          <v-col
-            v-for="objProy in ObjProy"
-            :key="objProy.id"
-            cols="12"
-            md="4"
-            xs="6"
-            sm="6"
-            class="pt-2"
-          > -->
         <v-card
           md="4"
           elevation="2"
@@ -27,7 +18,13 @@
           v-for="objProy in ObjProy"
           :key="objProy.id"
         >
-          <v-img class="imgBack" :src="objProy.img"></v-img>
+          <v-img class="imgBack" :src="objProy.img">
+            <div class="informationPresentationCard">
+              <div class="tools" v-for="icon in objProy.iconos" :key="icon.id">
+                <v-img :src="icon" width="35px"></v-img>
+              </div>
+            </div>
+          </v-img>
           <div class="contenidoText">
             <h3>{{ objProy.titulo }}</h3>
             <p class="descripcion">
@@ -102,7 +99,7 @@ export default {
         iconos: [
           require("@/assets/img/herramientas/flask.png"),
           require("@/assets/img/herramientas/mongoDB.png"),
-          require("@/assets/img/herramientas/html5.png"),
+          require("@/assets/img/herramientas/bootstrap.png"),
           require("@/assets/img/herramientas/js.png"),
         ],
       },
@@ -113,7 +110,8 @@ export default {
         p: "Plataforma web realizada en base al aprendizaje del consumo de una API externa (The Rick and Morty API), esto realizado en el framework de Vue js 2.0, utilizando de Vuex la libreria 'createStore' para agregar los states, mutations y las actions, en el desarrollo del mismo.",
         url: "https://web-rick-and-morty.netlify.app",
         iconos: [
-          require("@/assets/img/herramientas/html5.png"),
+          require("@/assets/logo.png"),
+
           require("@/assets/img/herramientas/js.png"),
         ],
       },
@@ -123,6 +121,10 @@ export default {
         titulo: "Juego basico con JS",
         p: "Un juego realizado en el framework de Phaser, el cual su desarrollo esta basado en HTML5 y Javascript. Para esto, estuve siguiendo un curso en udemy, el cual me ayudo a aprender y realizar este proyecto. Para comenzar a probarlo, puede visitar el sitio.",
         url: "https://atlantisjs.netlify.app",
+        iconos: [
+          require("@/assets/img/herramientas/phaserJS.png"),
+          require("@/assets/img/herramientas/js.png"),
+        ],
       },
       {
         id: 4,
@@ -130,6 +132,11 @@ export default {
         titulo: "Web del clima",
         p: "Un desarrollo en base a un mock up que entrego la web de devchallenges.io, junto con la api de 'metaweather' que se uso. Dicha aplicacion web, esta desarrollada en React JS, en donde estuve aprendiendo sobre Hooks, props, router dom, entre otros vistos en un curso en udemy. Solo ejecución local.",
         url: "https://github.com/xSimon76x/app-clima-localizacion.git",
+        iconos: [
+          require("@/assets/img/herramientas/reactJS.png"),
+          require("@/assets/img/herramientas/bulmaCss.png"),
+          require("@/assets/img/herramientas/js.png"),
+        ],
       },
       {
         id: 5,
@@ -137,23 +144,12 @@ export default {
         titulo: "Aplicación de Pokemon",
         p: "Una aplicación web que busca visualizar una lista de Pokémon, para generar una cierta cantidad de funciones respecto a esto, que desembocarían en ver su detalle al cliquear en su tarjeta. Dicho desarrollo se basó en la Api llamada “PokeAPI”, que fue consumida en el ambiente de React JS.",
         url: "https://app-web-pokemon.netlify.app",
+        iconos: [
+          require("@/assets/img/herramientas/reactJS.png"),
+          require("@/assets/img/herramientas/bootstrap.png"),
+          require("@/assets/img/herramientas/js.png"),
+        ],
       },
-      // {
-      //   id: 5,
-      //   img: require("@/assets/img/fondProyect/rickandmorty.png"),
-      //   titulo: "Analítica CX",
-      //   p: "",
-      //   url: "",
-      //   iconos: ["4", "2"],
-      // },
-      // {
-      //   id: 5,
-      //   img: require("@/assets/img/fondProyect/rickandmorty.png"),
-      //   titulo: "Analítica CX",
-      //   p: "",
-      //   url: "",
-      //   iconos: ["5", "2"],
-      // },
     ],
   }),
   methods: {
@@ -185,20 +181,42 @@ export default {
 
 /* display: grid, y eliminar 'flex-wrap: wrap;
   justify-content: center;' para mantener el anterior orden  */
-.containerPro {
-  padding-top: 4rem;
-  width: 100%;
+
+.informationPresentationCard {
   display: flex;
-  height: 100%;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  height: 15%;
+  width: 100%;
+  bottom: 0;
+  -webkit-box-shadow: inset -3px 0px 72px 32px rgba(204, 204, 204, 1);
+  -moz-box-shadow: inset -3px 0px 72px 32px rgba(204, 204, 204, 1);
+  box-shadow: inset -3px 0px 72px 32px rgba(204, 204, 204, 1);
+}
+
+.tools {
+  padding-right: 1vh;
+}
+
+.containerPro {
+  display: grid;
+  position: relative;
   flex-wrap: wrap;
   justify-content: center;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 2fr));
+  grid-template-columns: repeat(auto-fill, minmax(350px, 3fr));
   grid-gap: 2rem;
-  margin: 1rem 0;
+  padding: 0;
+  margin: 0;
+  height: auto;
+  width: 100%;
+  align-self: center;
 }
 
 .cardBack {
   position: relative;
+  align-self: center;
+  justify-self: center;
   height: 300px;
   width: 420px;
   overflow: hidden;
@@ -210,6 +228,19 @@ export default {
   width: 100%;
   height: 100%;
   transition: all 500ms ease-out;
+}
+
+.cardBack:hover > .imgBack .informationPresentationCard {
+  -webkit-box-shadow: inset -3px 0px 72px 32px rgba(150, 21, 21, 0);
+  -moz-box-shadow: inset -3px 0px 72px 32px rgba(202, 10, 10, 0);
+  box-shadow: inset -3px 0px 72px 32px rgba(156, 14, 14, 0);
+  transition: all 300ms ease-out;
+}
+
+.cardBack:hover > .imgBack .informationPresentationCard .tools {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 300ms ease-out;
 }
 
 .cardBack:hover > .contenidoText {
