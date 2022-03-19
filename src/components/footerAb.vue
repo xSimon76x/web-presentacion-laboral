@@ -35,14 +35,16 @@
             >
               Situación Actual
             </h2>
-            <p
-              class="textFooter text-caption text-sm-body-2 text-md-body-1 text-lg-h6 text-xl-h4"
-            >
-              Actualmente me encuentro en el desarrollo de ciertos proyectos de
-              aprendizaje, en donde voy ampliando mis conocimientos de
-              desarrollador, sin embargo, me encuentro disponible de forma
-              inmediata para cualquier actividad laboral con jornada completa.
-            </p>
+            <div class="containerText">
+              <p
+                class="textFooter text-caption text-sm-body-2 text-md-body-1 text-justify"
+              >
+                Actualmente me encuentro en el desarrollo de ciertos proyectos
+                de aprendizaje, en donde voy ampliando mis conocimientos de
+                desarrollador, sin embargo, me encuentro disponible de forma
+                inmediata para cualquier actividad laboral con jornada completa.
+              </p>
+            </div>
           </div>
         </v-col>
         <v-col cols="3">
@@ -88,7 +90,12 @@
               Contactos
             </h2>
             <div class="containerRedes">
-              <div class="redes" v-for="redes in links" :key="redes.name">
+              <div
+                class="redes"
+                v-for="redes in links"
+                :key="redes.name"
+                :title="redes.name"
+              >
                 <v-icon class="pr-2">
                   {{ redes.icons }}
                 </v-icon>
@@ -100,19 +107,19 @@
           </div>
         </v-col>
       </v-row>
-      <!-- <v-row>
-        <v-col cols="12">
-          <v-divider></v-divider>
-        </v-col>
-      </v-row> -->
 
       <v-row>
         <v-col cols="12">
-          <p class="text-center white--text">
-            Todos los derechos reservados por
-            <strong class="white--text"> Simon Ivan Bustamante Venegas</strong>
-            ©2022
-          </p>
+          <div class="subFooter">
+            <v-divider></v-divider>
+
+            <p class="text-center white--text pt-6">
+              Todos los derechos reservados ©2022
+              <strong class="white--text">
+                Simon Ivan Bustamante Venegas</strong
+              >
+            </p>
+          </div>
         </v-col>
       </v-row>
     </v-footer>
@@ -197,15 +204,23 @@ export default {
 </script>
 
 <style>
-/* .v-footer {
-  background-color: #2b2b2b !important;
-} */
+.v-footer {
+  --padLeft: 8vw;
+  --padRight: 8vw;
+}
 .row {
   margin: 0 !important;
 }
 
 .containerFooter {
-  padding: 10vh;
+  padding-top: 10vh;
+  padding-right: var(--padLeft);
+  padding-left: var(--padRight);
+  padding-bottom: 1rem;
+}
+
+.containerText {
+  padding-top: 2.5rem;
 }
 
 .tecnologias-web {
@@ -219,7 +234,8 @@ export default {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  height: 100%;
+  height: auto;
+  padding-top: 2.5rem;
 }
 
 .item-web {
@@ -234,7 +250,8 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  height: 100%;
+  height: auto;
+  padding-top: 2.5rem;
 }
 
 .contactos {
@@ -249,7 +266,8 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  height: 100%;
+  height: auto;
+  padding-top: 2.5rem;
 }
 
 .redes {
@@ -265,12 +283,21 @@ export default {
   color: aqua !important;
 }
 
+.redes[title^="Linkedin"] {
+  padding-top: 0rem;
+}
+
 .itemSeleccion {
   cursor: pointer;
 }
 
 .itemSeleccion:hover {
   color: aqua !important;
+}
+
+.subFooter {
+  padding-right: var(--padLeft);
+  padding-left: var(--padRight);
 }
 
 .textFooter {
