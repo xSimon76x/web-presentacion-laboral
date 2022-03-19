@@ -206,8 +206,9 @@ export default {
   justify-content: center;
   grid-template-columns: repeat(auto-fill, minmax(350px, 3fr));
   grid-gap: 2rem;
-  padding: 0;
   margin: 0;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   height: auto;
   width: 100%;
   align-self: center;

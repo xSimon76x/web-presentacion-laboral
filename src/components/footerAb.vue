@@ -71,10 +71,16 @@
             <h2
               class="text-caption text-sm-body-2 text-md-body-1 text-lg-h6 text-xl-h4"
             >
-              Mi Portafolio
+              Web Portafolio
             </h2>
             <div class="containerItem">
-              <div v-for="item in itemsWeb" :key="item.title">
+              <div
+                class="itemsPages"
+                v-for="item in itemsWeb"
+                :key="item.title"
+                :title="item.title"
+              >
+                <v-icon class="pr-2"> {{ item.icon }}</v-icon>
                 <p class="white--text itemSeleccion" @click="red(item.route)">
                   {{ item.title }}
                 </p>
@@ -252,6 +258,20 @@ export default {
   align-items: flex-start;
   height: auto;
   padding-top: 2.5rem;
+}
+
+.itemsPages {
+  display: flex;
+  align-content: center;
+  padding: 0.5rem;
+}
+
+.itemsPages p {
+  margin: 0;
+}
+
+.itemsPages[title^="Inicio"] {
+  padding-top: 0rem;
 }
 
 .contactos {
