@@ -135,6 +135,7 @@
 <script>
 export default {
   data: () => ({
+    newIcon= "",
     icons: ["mdi-linkedin", "mdi-email", "mdi-git", "mdi-phone"],
     variant: "default",
     links: [
