@@ -4,7 +4,14 @@
     <preS />
     <!-- <iPres /> -->
     <!-- <hello-world /> -->
-    <pFil />
+    <v-row style="padding: 5rem">
+      <v-col cols="12" xs="" sm="12" md="6">
+        <pFil />
+      </v-col>
+      <v-col cols="12" sm="12" md="6">
+        <hBil />
+      </v-col>
+    </v-row>
 
     <fonHome />
     <hBil />
@@ -43,3 +50,4 @@ export default {
   },
 };
 </script>
+<style></style>

@@ -143,11 +143,11 @@ export default {
         url: "https://www.linkedin.com/in/simon-bustamante-venegas",
         name: "Linkedin",
       },
-      {
-        icons: "mdi-email",
-        url: "https://www.google.com/gmail/about/",
-        name: "Email",
-      },
+      // {
+      //   icons: "mdi-email",
+      //   url: "https://www.google.com/gmail/about/",
+      //   name: "Email",
+      // },
       {
         icons: "mdi-git",
         url: "https://github.com/xSimon76x",

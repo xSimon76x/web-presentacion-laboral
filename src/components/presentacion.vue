@@ -2,15 +2,41 @@
   <div>
     <div class="header">
       <div class="inner-header container-pre">
-        <div class="flex-column">
-          <h1 class="text-xl-h4" style="">Desarrollador Junior</h1>
+        <v-row>
+          <v-col cols="12" md="6" sm="12" align-self="center">
+            <h1 class="text-sm-h1 text-sm-h2 text-md-h2 text-lg-h1">
+              ¡Hola a todos!
+            </h1>
+            <h3 style="font-family: 'Roboto', sans-serif">
+              Soy Simón, diseño y desarrollo software.
+            </h3>
+          </v-col>
+          <v-col cols="12" md="6" sm="12" align-self="center">
+            <div class="container-img">
+              <v-img
+                class="imagen-presentacion"
+                contain
+                src="../assets/img/desarrollador-imagen.png"
+              ></v-img>
+            </div>
+          </v-col>
+        </v-row>
+        <!-- <div class="flex-column">
+          <h1 class="display-4" style="font-size: 6rem">¡Hola a todos!</h1>
+          <h3 class="text-caption" style="">Soy Simón Bustamante Venegas</h3>
+          <h3>Desarrollador Web</h3>
           <h2 class="text-caption">
             Enfocado en algunos proyectos y aplicaciones web
           </h2>
           <v-icon large color="white" class="pr-2 imgPres">
             mdi-monitor
-          </v-icon>
+          </v-icon> 
         </div>
+        <div class="flex-column">
+          <v-responsive min-width="auto" min-height="auto" width="300px">
+            <v-img contain src="../assets/img/desarrollador-imagen.png"></v-img>
+          </v-responsive>
+        </div> -->
       </div>
       <!--Waves Container-->
       <div>
