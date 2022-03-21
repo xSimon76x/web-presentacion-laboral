@@ -35,6 +35,7 @@
 export default {
   data: () => ({
     elevations: [6, 12, 18],
+
     herramientas: [
       {
         url: require("@/assets/img/herramientas/html5.png"),

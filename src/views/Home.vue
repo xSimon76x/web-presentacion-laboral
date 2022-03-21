@@ -13,7 +13,7 @@
       </v-col>
     </v-row>
 
-    <fonHome />
+    <fonHome style="background-color: #1b263b" />
     <hBil />
 
     <fAb />
