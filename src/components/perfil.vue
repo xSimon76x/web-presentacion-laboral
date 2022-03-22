@@ -32,7 +32,7 @@
           </div>
 
           <h2 class="tilBlack pt-2 text-center align-center">
-            Simon Bustamante
+            Simon Iván Bustamante Venegas
           </h2>
           <h4
             class="font-weight-bold mb-5 text-center align-center"

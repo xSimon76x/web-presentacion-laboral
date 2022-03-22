@@ -1,43 +1,17 @@
 <template>
   <div>
     <v-footer padless dark>
-      <!-- <v-card flat tile width="100%" class="text-center">
-        <v-card-text class="blue lighten-1 text-center py-0">
-          <v-btn
-            @click="red(link.url)"
-            v-for="link in links"
-            :key="link.name"
-            class="mx-2"
-            dark
-            icon
-          >
-            <v-tooltip top>
-              <template v-slot:activator="{ on, attrs }">
-                <v-icon size="20px" v-bind="attrs" v-on="on">
-                  {{ link.icons }}
-                </v-icon>
-              </template>
-              <span style="font-size: 1.8vh">{{ link.name }}</span>
-            </v-tooltip>
-          </v-btn>
-        </v-card-text>
-        <v-divider></v-divider>
-        <v-card-text class="py-2 white--text text-center textFooter Sfooter">
-          Todos los derechos reservados por
-          <strong> Simon Ivan Bustamante Venegas</strong> ©2022
-        </v-card-text>
-      </v-card> -->
       <v-row class="containerFooter" justify="center">
-        <v-col cols="3">
-          <div class="mi-perfil">
+        <v-col cols="12" sm="6" md="3">
+          <div class="itemTitulo">
             <h2
-              class="text-caption text-sm-body-2 text-md-body-1 text-lg-h6 text-xl-h4"
+              class="titulo text-caption text-sm-body-2 text-md-body-1 text-lg-h6 text-xl-h4"
             >
-              Situación Actual
+              Situación actual
             </h2>
             <div class="containerText">
               <p
-                class="textFooter text-caption text-sm-body-2 text-md-body-1 text-justify"
+                class="text-caption text-sm-body-2 text-md-body-1 text-justify"
               >
                 Actualmente me encuentro en el desarrollo de ciertos proyectos
                 de aprendizaje, en donde voy ampliando mis conocimientos de
@@ -47,12 +21,12 @@
             </div>
           </div>
         </v-col>
-        <v-col cols="3">
-          <div class="tecnologias-web">
+        <v-col cols="12" sm="6" md="3">
+          <div class="itemTitulo">
             <h2
-              class="text-caption text-sm-body-2 text-md-body-1 text-lg-h6 text-xl-h4"
+              class="titulo text-caption text-sm-body-2 text-md-body-1 text-lg-h6 text-xl-h4"
             >
-              Tecnologias Usadas
+              Tecnologias usadas
             </h2>
             <div class="containerTec">
               <div v-for="tecnologia in tecnologias" :key="tecnologia.id">
@@ -66,38 +40,38 @@
             </div>
           </div>
         </v-col>
-        <v-col cols="3">
-          <div class="item-web">
+        <v-col cols="12" sm="6" md="3">
+          <div class="itemTitulo">
             <h2
-              class="text-caption text-sm-body-2 text-md-body-1 text-lg-h6 text-xl-h4"
+              class="titulo text-caption text-sm-body-2 text-md-body-1 text-lg-h6 text-xl-h4"
             >
               Web Portafolio
             </h2>
             <div class="containerItem">
               <div
-                class="itemsPages"
+                class="itemsLinks"
                 v-for="item in itemsWeb"
                 :key="item.title"
                 :title="item.title"
               >
                 <v-icon class="pr-2"> {{ item.icon }}</v-icon>
-                <p class="white--text itemSeleccion" @click="red(item.route)">
+                <p class="itemSeleccion" @click="red(item.route)">
                   {{ item.title }}
                 </p>
               </div>
             </div>
           </div>
         </v-col>
-        <v-col cols="3">
-          <div class="contactos">
+        <v-col cols="12" sm="6" md="3">
+          <div class="itemTitulo">
             <h2
-              class="text-caption text-sm-body-2 text-md-body-1 text-lg-h6 text-xl-h4"
+              class="titulo text-caption text-sm-body-2 text-md-body-1 text-lg-h6 text-xl-h4"
             >
               Contactos
             </h2>
             <div class="containerRedes">
               <div
-                class="redes"
+                class="itemsLinks"
                 v-for="redes in links"
                 :key="redes.name"
                 :title="redes.name"
@@ -105,7 +79,7 @@
                 <v-icon class="pr-2">
                   {{ redes.icons }}
                 </v-icon>
-                <p class="white--text mb-0" @click="red(redes.url)">
+                <p class="itemSeleccion mb-0" @click="red(redes.url)">
                   {{ redes.name }}
                 </p>
               </div>
@@ -213,6 +187,9 @@ export default {
 .v-footer {
   --padLeft: 8vw;
   --padRight: 8vw;
+  --colorTitulo: #adadad;
+  --colorSubtitulo: #adadad;
+  --colorIcon: #498ed0;
 }
 .row {
   margin: 0 !important;
@@ -225,11 +202,20 @@ export default {
   padding-bottom: 1rem;
 }
 
+.itemTitulo > .titulo {
+  font-family: "Work Sans", sans-serif !important;
+  color: var(--colorTitulo);
+}
+
 .containerText {
   padding-top: 2.5rem;
 }
 
-.tecnologias-web {
+.itemTitulo > .containerText > p {
+  color: var(--colorSubtitulo);
+}
+
+.itemTitulo {
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -244,11 +230,15 @@ export default {
   padding-top: 2.5rem;
 }
 
-.item-web {
+.itemTitulo {
   display: flex;
   flex-direction: column;
   height: 100%;
   width: 100%;
+}
+
+.item-web > h2 {
+  color: var(--colorTitulo);
 }
 
 .containerItem {
@@ -260,21 +250,30 @@ export default {
   padding-top: 2.5rem;
 }
 
-.itemsPages {
+.itemsLinks {
   display: flex;
   align-content: center;
   padding: 0.5rem;
 }
 
-.itemsPages p {
+.itemsLinks > p {
   margin: 0;
+  color: var(--colorSubtitulo) !important;
 }
 
-.itemsPages[title^="Inicio"] {
+.itemsLinks > i {
+  color: var(--colorIcon) !important;
+}
+
+.itemsLinks[title^="Inicio"] {
   padding-top: 0rem;
 }
 
-.contactos {
+.itemsLinks[title^="Linkedin"] {
+  padding-top: 0rem;
+}
+
+.itemTitulo {
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -288,23 +287,6 @@ export default {
   align-items: flex-start;
   height: auto;
   padding-top: 2.5rem;
-}
-
-.redes {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 0.5rem;
-  cursor: pointer;
-}
-
-.redes > p:hover {
-  color: aqua !important;
-}
-
-.redes[title^="Linkedin"] {
-  padding-top: 0rem;
 }
 
 .itemSeleccion {

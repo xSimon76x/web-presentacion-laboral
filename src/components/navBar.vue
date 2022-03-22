@@ -1,14 +1,14 @@
 <template>
   <div>
     <v-card flat tile fixed>
-      <v-app-bar fixed elevation="0" color="transparent">
+      <v-app-bar fixed elevation="7" dark>
         <!--absolute para que no este fijo mientras se hace scroll en la vista-->
         <template v-slot:img="{ props }">
           <v-img class="back" v-bind="props"></v-img>
         </template>
 
         <v-app-bar-nav-icon
-          color="white"
+          color="red"
           @click.stop="drawerPadre = !drawerPadre"
         ></v-app-bar-nav-icon>
 
@@ -22,8 +22,8 @@
             style="text-decoration: none; color: inherit"
           >
             <div class="d-flex align-center">
-              <v-icon color="white">{{ item.icon }}</v-icon>
-              <p class="white--text pl-1 mb-0">
+              <v-icon class="itemSelectNavBar">{{ item.icon }}</v-icon>
+              <p class="itemSelectNavBar pl-1 mb-0">
                 {{ item.title }}
               </p>
             </div>
@@ -122,8 +122,20 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.v-icon {
+  color: #6facdd !important;
+}
+
 .back {
   background: transparent;
   // 1f1e1e
+}
+
+.barNav {
+  background-color: #222222 !important;
+}
+
+.itemSelectNavBar {
+  color: #6facdd !important;
 }
 </style>

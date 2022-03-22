@@ -28,7 +28,7 @@
       </div>
 
       <v-row>
-        <v-col cols="12">
+        <v-col cols="12" class="d-flex justify-center">
           <v-slide-group v-model="model" class="pa-4" center-active show-arrows>
             <v-slide-item
               v-for="card in objCards"
@@ -123,11 +123,7 @@
 </template>
 
 <script>
-import cardTimLin from "../components/cardTimeLine.vue";
 export default {
-  components: {
-    cardTimLin,
-  },
   data: () => ({
     events: [],
     input: null,
@@ -261,5 +257,9 @@ export default {
   opacity: 1 !important;
   position: absolute;
   width: 100%;
+}
+
+.tituloView {
+  font-family: "Work Sans", sans-serif !important;
 }
 </style>

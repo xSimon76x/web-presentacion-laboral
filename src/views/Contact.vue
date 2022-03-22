@@ -2,7 +2,7 @@
   <div>
     <nBar />
     <preS />
-    <contactos />
+    <contacto />
     <foAb />
   </div>
 </template>
@@ -11,16 +11,18 @@
 import preS from "../components/presentacion.vue";
 import nBar from "../components/navBar.vue";
 import iPres from "../components/imgPresentacion.vue";
-import contactos from "../components/contactos.vue";
+import contacto from "../components/contactos.vue";
 import foAb from "../components/footerAb.vue";
-
+import loadingPageVue from "../components/loadingPage.vue";
 export default {
+  name: "Contact",
   components: {
     nBar,
-    contactos,
+    contacto,
     preS,
     foAb,
     iPres,
+    loadingPageVue,
   },
 };
 </script>

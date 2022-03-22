@@ -1,7 +1,7 @@
 <template>
   <div class="divContainer" elevation="0">
     <div class="d-flex justify-center pb-3">
-      <h1 class="tituloView font-weight-bold">Conocimientos</h1>
+      <h1 class="tituloView text-center">Conocimientos</h1>
     </div>
     <div class="d-flex justify-center">
       <v-divider
@@ -40,55 +40,55 @@ export default {
       {
         url: require("@/assets/img/herramientas/html5.png"),
         alt: "HTML",
-        wd: "80",
+        wd: "60",
         hg: "100%",
       },
       {
         url: require("@/assets/img/herramientas/js.png"),
         alt: "Javacript",
-        wd: "80",
+        wd: "60",
         hg: "100%",
       },
       {
         url: require("@/assets/img/herramientas/flask.png"),
         alt: "Flask",
-        wd: "80",
+        wd: "60",
         hg: "100%",
       },
       {
         url: require("@/assets/img/herramientas/mongoDB.png"),
         alt: "MongoDB",
-        wd: "80",
+        wd: "60",
         hg: "100%",
       },
       {
         url: require("@/assets/img/herramientas/github.png"),
         alt: "Github",
-        wd: "80",
+        wd: "60",
         hg: "100%",
       },
       {
         url: require("@/assets/logo.png"),
         alt: "Vue",
-        wd: "80",
+        wd: "58",
         hg: "100%",
       },
       {
         url: require("@/assets/img/logo/vuetify2.0.png"),
         alt: "Vuetify",
-        wd: "92",
+        wd: "68",
         hg: "auto",
       },
       {
         url: require("@/assets/img/herramientas/reactJS.png"),
         alt: "React JS",
-        wd: "80",
+        wd: "62",
         hg: "auto",
       },
       {
         url: require("@/assets/img/herramientas/bulmaCss.png"),
         alt: "Bulma Css",
-        wd: "80",
+        wd: "60",
         hg: "auto",
       },
     ],
@@ -104,7 +104,7 @@ export default {
   height: 100%;
   flex-wrap: wrap;
   justify-content: center;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 2fr));
+  grid-template-columns: repeat(auto-fill, minmax(350px, 3fr));
   grid-gap: 2rem;
   /* margin: 1rem 0; */
 }
@@ -140,6 +140,11 @@ export default {
 
 .custom-shape-divider-top-1644554184 .shape-fill {
   fill: red;
+}
+
+.tituloHabilidad {
+  font-family: "Work Sans", sans-serif !important;
+  font-size: 2rem;
 }
 /* end shape top */
 </style>
