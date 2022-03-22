@@ -1,31 +1,32 @@
 <template>
   <div class="divContainer" elevation="0">
-    <div class="d-flex justify-center mb-6">
-      <h1 class="tituloView font-weight-bold text-center pa-2">
-        Conocimientos
-      </h1>
+    <div class="d-flex justify-center pb-3">
+      <h1 class="tituloView text-center">Conocimientos</h1>
+    </div>
+    <div class="d-flex justify-center">
+      <v-divider
+        inset
+        width="35"
+        style="border-width: 2px; border-radius: 12px; flex: none; margin: 0"
+        color="#0D47A1"
+      ></v-divider>
     </div>
 
-    <div>
-      <v-container>
-        <div class="vCont">
-          <v-sheet
-            :elevation="4"
-            class=""
-            height="100"
-            width="100"
-            style="position: relative"
-            v-for="herramienta in herramientas"
-            :key="herramienta.alt"
-          >
+    <div class="pt-6 vCont">
+      <div v-for="herramienta in herramientas" :key="herramienta.alt">
+        <v-row>
+          <v-col cols="12">
             <v-img
-              class="img"
               :src="herramienta.url"
               :alt="herramienta.alt"
-            ></v-img>
-          </v-sheet>
-        </div>
-      </v-container>
+              :width="herramienta.wd"
+            ></v-img
+          ></v-col>
+        </v-row>
+        <v-row>
+          <v-col cols="12" class="text-center">{{ herramienta.alt }}</v-col>
+        </v-row>
+      </div>
     </div>
   </div>
 </template>
@@ -34,59 +35,60 @@
 export default {
   data: () => ({
     elevations: [6, 12, 18],
+
     herramientas: [
       {
         url: require("@/assets/img/herramientas/html5.png"),
-        alt: "html5",
-        wd: "87%",
+        alt: "HTML",
+        wd: "60",
         hg: "100%",
       },
       {
         url: require("@/assets/img/herramientas/js.png"),
-        alt: "javascript",
-        wd: "77%",
+        alt: "Javacript",
+        wd: "60",
         hg: "100%",
       },
       {
         url: require("@/assets/img/herramientas/flask.png"),
-        alt: "flask",
-        wd: "83%",
+        alt: "Flask",
+        wd: "60",
         hg: "100%",
       },
       {
         url: require("@/assets/img/herramientas/mongoDB.png"),
-        alt: "mongoDB",
-        wd: "70%",
+        alt: "MongoDB",
+        wd: "60",
         hg: "100%",
       },
       {
         url: require("@/assets/img/herramientas/github.png"),
-        alt: "github",
-        wd: "auto",
+        alt: "Github",
+        wd: "60",
         hg: "100%",
       },
       {
         url: require("@/assets/logo.png"),
-        alt: "vue",
-        wd: "auto",
+        alt: "Vue",
+        wd: "58",
         hg: "100%",
       },
       {
         url: require("@/assets/img/logo/vuetify2.0.png"),
-        alt: "vuetify",
-        wd: "auto",
+        alt: "Vuetify",
+        wd: "68",
         hg: "auto",
       },
       {
         url: require("@/assets/img/herramientas/reactJS.png"),
-        alt: "react",
-        wd: "auto",
+        alt: "React JS",
+        wd: "62",
         hg: "auto",
       },
       {
         url: require("@/assets/img/herramientas/bulmaCss.png"),
-        alt: "bulmaCss",
-        wd: "auto",
+        alt: "Bulma Css",
+        wd: "60",
         hg: "auto",
       },
     ],
@@ -96,15 +98,15 @@ export default {
 
 <style>
 .vCont {
-  padding-top: 4rem;
+  padding-top: 0rem;
   width: 100%;
   display: flex;
   height: 100%;
   flex-wrap: wrap;
   justify-content: center;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(350px, 3fr));
   grid-gap: 2rem;
-  margin: 1rem 0;
+  /* margin: 1rem 0; */
 }
 .img {
   position: relative;
@@ -116,7 +118,7 @@ export default {
   max-width: 100%;
 }
 .divContainer {
-  padding-top: 6vh;
+  padding-top: 5vh;
   padding-bottom: 10vh;
 }
 /* start shape top */
@@ -138,6 +140,11 @@ export default {
 
 .custom-shape-divider-top-1644554184 .shape-fill {
   fill: red;
+}
+
+.tituloHabilidad {
+  font-family: "Work Sans", sans-serif !important;
+  font-size: 2rem;
 }
 /* end shape top */
 </style>

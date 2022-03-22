@@ -1,19 +1,19 @@
 <template>
   <div class="contenedor" elevation="0">
-    <row class="d-flex justify-center">
+    <v-row class="d-flex justify-center">
       <v-col>
         <h1 class="tituloView font-weight-bold text-center">Contacto</h1>
       </v-col>
-    </row>
+    </v-row>
     <v-row class="d-flex justify-center contact">
       <v-col
         cols="12"
-        sm="12"
-        md="8"
         xs="12"
+        sm="12"
+        md="12"
         lg="8"
         class="d-flex justify-center mb-6"
-        style="padding-left: 3vw"
+        style="margin-left: 0px"
       >
         <v-card
           class="overflow-hidden card"
@@ -79,7 +79,7 @@
         cols="12"
         xs="12"
         sm="12"
-        md="4"
+        md="12"
         lg="4"
         class="d-flex justify-center mb-6"
       >
@@ -89,6 +89,7 @@
           dark
           elevation="10"
           width="90%"
+          min-height="400px"
           height="auto"
         >
           <iframe
@@ -111,6 +112,7 @@ import emailjs from "@emailjs/browser";
   emailjs.init("user_Zhl3cik28OOAZvafOvRYu");
 })();
 export default {
+  name: "Contactos",
   data() {
     return {
       hasSaved: false,
@@ -189,7 +191,7 @@ export default {
   padding-top: 4rem;
 }
 .tituloView {
-  font-family: sans-serif;
+  font-family: "Work Sans", sans-serif !important;
   color: #141c3a;
   line-height: 2rem;
   font-size: 2rem;

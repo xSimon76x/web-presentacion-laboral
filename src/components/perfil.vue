@@ -1,115 +1,89 @@
 <template>
   <div class="pt-12">
     <!-- tile dark  -->
+    <div class="d-flex justify-center pb-3">
+      <h1 class="tituloView font-weight-bold">Sobre mí</h1>
+    </div>
     <div class="d-flex justify-center">
-      <h1 class="tituloView font-weight-bold text-center">Sobre Mi</h1>
+      <v-divider
+        inset
+        width="35"
+        style="border-width: 2px; border-radius: 12px; flex: none; margin: 0"
+        color="#0D47A1"
+      ></v-divider>
     </div>
 
-    <v-card class="bg" elevation="0">
-      <v-row
-        no-gutters
-        tile
-        lights-out
-        class="pt-4"
-        style="flex-wrap: nowrap"
-        align="center"
-      >
-        <v-col
-          cols="12"
-          style="min-width: 100px"
-          class="flex-grow-0 flex-shrink-1"
-        >
-          <div class="d-flex pa-2 justify-center" outlined tile>
-            <v-sheet
-              elevation="5"
-              width="700"
-              height="auto"
-              class="white"
-              rounded
+    <div class="pt-6">
+      <v-row>
+        <v-col>
+          <div class="text-center">
+            <v-avatar
+              class="avatar"
+              style="
+                height: 100%;
+                width: 6rem;
+                min-height: auto;
+                min-width: auto;
+                max-width: 100%;
+              "
             >
-              <v-row class="d-flex justify-center py-4 px-4">
-                <v-col
-                  cols="4"
-                  lg="4"
-                  sm="4"
-                  xl="4"
-                  xs="4"
-                  class="d-flex flex-column justify-center pr-0"
-                  style="margin: 0"
-                >
-                  <!-- <div class="d-flex flex-column">
-                    
-                </div> -->
-                  <div class="text-center">
-                    <v-avatar
-                      class="avatar"
-                      style="
-                        height: 100%;
-                        width: 40%;
-                        min-height: auto;
-                        min-width: auto;
-                        max-width: 100%;
-                      "
-                    >
-                      <v-img src="../assets/img/logo/imgPerfil.png"></v-img>
-                    </v-avatar>
-                  </div>
+              <v-img src="../assets/img/logo/imgPerfil.png"></v-img>
+            </v-avatar>
+          </div>
 
-                  <h2 class="tilBlack pt-2 text-center align-center">
-                    Simon Bustamante
-                  </h2>
-                  <h4
-                    class="font-weight-bold mb-5 text-center align-center"
-                    style="color: #0f446e; font-size: 80%"
-                  >
-                    sim.bustamante@duocuc.cl
-                  </h4>
-                </v-col>
-                <v-col class="d-flex flex-column" style="margin: 0">
-                  <p class="parrProy text-justify">
-                    Desde que finalice con mi carrera en ingeniería en
-                    informatica, mi principal objetivo está en la búsqueda de
-                    una empresa pequeña o mediana, para poder desarrollarme y
-                    crecer en el área profesional (como desarrollador) y
-                    personal, manteniendo mi motivación por aprender cualquier
-                    tecnología y metodología que requiera la compañía, con el
-                    fin de poder optar por la oportunidad de trabajar en dicha
-                    empresa.
-                  </p>
-                  <div class="d-flex justify-center">
-                    <v-btn
-                      @click="red(link.url)"
-                      v-for="link in links"
-                      :key="link.name"
-                      class="mx-1"
-                      dark
-                      icon
-                      color=" blue"
-                    >
-                      <!-- v-if="link.name !== 'Curriculum'" -->
-                      <v-tooltip top v-if="link.name !== 'Curriculum'">
-                        <template v-slot:activator="{ on, attrs }">
-                          <v-icon class="icons" v-bind="attrs" v-on="on">
-                            {{ link.icons }}
-                          </v-icon>
-                        </template>
-                        <span style="font-size: 1.8vh">{{ link.name }}</span>
-                      </v-tooltip>
-                    </v-btn>
-                  </div>
-                </v-col>
-              </v-row>
-            </v-sheet>
+          <h2 class="tilBlack pt-2 text-center align-center">
+            Simon Iván Bustamante Venegas
+          </h2>
+          <h4
+            class="font-weight-bold mb-5 text-center align-center"
+            style="color: #0f446e; font-size: 80%"
+          >
+            simonbustamante21@gmail.com
+          </h4>
+        </v-col>
+      </v-row>
+      <v-row>
+        <v-col cols="12">
+          <p class="parrProy text-justify">
+            Desde que finalice con mi carrera en ingeniería en informatica, mi
+            principal objetivo está en la búsqueda de una empresa pequeña o
+            mediana, para poder desarrollarme y crecer en el área profesional
+            (como desarrollador) y personal, manteniendo mi motivación por
+            aprender cualquier tecnología y metodología que requiera la
+            compañía, con el fin de poder optar por la oportunidad de trabajar
+            en dicha empresa.
+          </p>
+        </v-col>
+      </v-row>
+      <v-row>
+        <v-col cols="12">
+          <div class="d-flex justify-center">
+            <v-btn
+              @click="red(link.url)"
+              v-for="link in links"
+              :key="link.name"
+              class="mx-1"
+              dark
+              icon
+              color=" blue"
+            >
+              <v-tooltip top v-if="link.name !== 'Curriculum'">
+                <template v-slot:activator="{ on, attrs }">
+                  <v-icon class="icons" v-bind="attrs" v-on="on">
+                    {{ link.icons }}
+                  </v-icon>
+                </template>
+                <span style="font-size: 1.8vh">{{ link.name }}</span>
+              </v-tooltip>
+            </v-btn>
           </div>
         </v-col>
       </v-row>
-    </v-card>
+    </div>
   </div>
 </template>
 
 <script>
-// import { jsPDF } from "jspdf";
-
 export default {
   components: {},
 
