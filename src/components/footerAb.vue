@@ -14,11 +14,12 @@
                 class="text-caption text-sm-body-2 text-md-body-1 text-justify"
               >
                 Actualmente me encuentro enfocado en mi cargo laboral, en donde
-                estoy aprendiendo sobre flujos de creditos hipotecarios, y
-                nuevas tecnologias para seguir aprendiendo o complementando,
-                tales como; React, Typescript, Django Frameworks. En pararelo,
-                me mantengo realizando un curso de Node JS, y de forma pendiente
-                y con interes, en enfocarme en uno de Angular y Typescript.
+                estoy aprendiendo sobre flujos de créditos hipotecarios, y
+                nuevas tecnologías para seguir estudiando o complementando,
+                tales como; React JS, Typescript, Django Framework y PostgreSQL.
+                En paralelo, me mantengo realizando un curso de Node JS, y de
+                forma pendiente y con interés, en enfocarme en uno de Angular y
+                Typescript.
               </p>
             </div>
           </div>
