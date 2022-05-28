@@ -45,13 +45,13 @@
       <v-row>
         <v-col cols="12">
           <p class="parrProy text-justify">
-            Desde que finalice con mi carrera en ingeniería en informatica, mi
-            principal objetivo está en la búsqueda de una empresa pequeña o
-            mediana, para poder desarrollarme y crecer en el área profesional
-            (como desarrollador) y personal, manteniendo mi motivación por
-            aprender cualquier tecnología y metodología que requiera la
-            compañía, con el fin de poder optar por la oportunidad de trabajar
-            en dicha empresa.
+            Desde que finalice con mi carrera en ingeniería en informatica, y
+            estableciéndome en una empresa, para dar comienzo al mundo laboral,
+            mi principal objetivo es conocer nuevas y actuales tecnologías
+            ocupadas en el mercado, tanto así, que me permita desarrollarme,
+            para crecer en el área profesional y personal, manteniendo mi
+            motivación y rapidez por aprender cualquier tecnología y
+            metodología, aportando mi apoyo y siempre dispuesto a ayudar.
           </p>
         </v-col>
       </v-row>
