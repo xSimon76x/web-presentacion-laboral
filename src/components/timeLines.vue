@@ -45,7 +45,7 @@
                 <v-img height="150" width="100%" :src="card.imgExt"></v-img>
                 <v-list-item three-line>
                   <v-list-item-content>
-                    <v-list-item-title class="text-h5">
+                    <v-list-item-title class="text-h6">
                       {{ card.titulo }}
                     </v-list-item-title>
                     <v-list-item-subtitle>{{ card.sub }}</v-list-item-subtitle>
@@ -54,7 +54,7 @@
                     }}</v-list-item-subtitle>
                   </v-list-item-content>
 
-                  <v-list-item-avatar tile size="50">
+                  <v-list-item-avatar tile size="50" v-if="card.img">
                     <v-img height="auto" width="100%" :src="card.img"></v-img>
                   </v-list-item-avatar>
                 </v-list-item>
@@ -65,7 +65,7 @@
                   </div>
                 </v-card-text>
                 <v-card-actions class="d-flex justify-center">
-                  <v-tooltip bottom v-if="card.id == 2">
+                  <v-tooltip bottom v-if="card.url">
                     <template v-slot:activator="{ on, attrs }">
                       <v-btn
                         v-bind="attrs"
@@ -74,16 +74,16 @@
                         outlined
                         rounded
                         color="blue"
-                        @click="redirect(card.urlLinkedin)"
+                        @click="redirect(card.url)"
                       >
-                        <v-icon size="30px" class="iconCard">
-                          mdi-linkedin
+                        <v-icon size="30px" class="iconCard" v-if="card.icon">
+                          {{ card.icon }}
                         </v-icon>
                       </v-btn>
                     </template>
-                    <span style="font-size: 1.8vh"
-                      >Publicación en Linkedin</span
-                    >
+                    <span style="font-size: 1.8vh" v-if="card.descIcon">{{
+                      card.descIcon
+                    }}</span>
                   </v-tooltip>
                 </v-card-actions>
                 <v-row class="fill-height" align="center" justify="center">
@@ -162,8 +162,9 @@ export default {
         descExtendida:
           "Líder del equipo web, durante el ambicioso proyecto ‘Analítica CX’, implementando el desarrollo de la plataforma con tecnologías como; Vue JS, Flask (Python), HTML, JQuery (JS), CSS y utilizando la metodología SCRUM. ",
         fecha: "Jun 2021 - Nov 2021 ",
-        urlLinkedin:
-          "https://www.linkedin.com/posts/simon-bustamante-venegas_quiero-compartir-el-orgullo-que-me-hace-sentir-activity-6877388888483090432-cy07",
+        url: "https://www.linkedin.com/posts/simon-bustamante-venegas_quiero-compartir-el-orgullo-que-me-hace-sentir-activity-6877388888483090432-cy07",
+        icon: "mdi-linkedin",
+        descIcon: "Publicación en Linkedin",
       },
       {
         id: 3,
@@ -175,6 +176,31 @@ export default {
         descExtendida:
           "Finalización de carrera profesional en el instituto Duoc UC, adquiriendo habilidades tanto tecnicas como *blandas* para poner en practica, y con cierta experiencia en el desarrollo web, gracias al proyecto entre el Citt (Duoc UC) y Xentric SA.",
         fecha: "Dic 2021 ",
+      },
+      {
+        id: 4,
+        titulo: "Desarrollador Jr",
+        sub: "Asicom SA",
+        img: require("@/assets/img/logo/logoAsicom.png"),
+        imgExt: require("../assets/img/fondos/asicom.png"),
+        desc: "Finalización de carrera profesional en el instituto Duoc UC...",
+        descExtendida:
+          "Desarrollo de software, enfocado en el flujo de créditos hipotecarios de entidades bancarias, basado en las tecnologías de; React, TypeScript, Django Framework y PostgreSQL. Gestionando el trabajo, aplicando Metodologías Agiles (Kanban) con el apoyo de Jira.",
+        fecha: "Abr 2022 - Presente",
+      },
+      {
+        id: 5,
+        titulo: "Architecting with Google Compute Engine",
+        sub: "Curso de Coursera",
+        //img: require("@/assets/img/logo/logoAsicom.png"),
+        imgExt: require("../assets/img/fondos/curso en coursera - google cloud.jpeg"),
+        desc: "Finalización de carrera profesional en el instituto Duoc UC...",
+        descExtendida:
+          "Exploración en la implementación de componentes, de la infraestructura del servicio de 'Google Cloud Platform', como; redes, Virtual Machines, Servicios de aplicaciones, Bases de datos, entre otros.",
+        fecha: "May 2022",
+        url: "https://coursera.org/verify/specialization/AWR5UJVBKANY",
+        icon: "mdi-google",
+        descIcon: "Visualizar certificado",
       },
     ],
   }),
